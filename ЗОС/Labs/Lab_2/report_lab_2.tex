@@ -1,0 +1,172 @@
+\documentclass[a4paper,14pt]{extarticle} 
+\usepackage[a4paper,top=1.5cm, bottom=1.5cm, left=2cm, right=1cm]{geometry}
+%\usepackage[T2A]{fontenc}
+%\usepackage[english, russian]{babel}
+\usepackage{graphicx}
+\graphicspath{{./pics/}}
+\DeclareGraphicsExtensions{.pdf,.png,}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{FreeSans}
+\setmonofont{FreeMono}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguages{english,russian}
+\usepackage{setspace}
+\usepackage[many]{tcolorbox}
+
+\begin{document}
+    \begin{center}
+        \thispagestyle{empty}
+        \begin{singlespace}
+        ФЕДЕРАЛЬНОЕ АГЕНТСТВО СВЯЗИ
+
+        ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ
+
+        УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ
+
+        «САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ ТЕЛЕКОММУНИКАЦИЙ ИМ. ПРОФ. М.А. БОНЧ-БРУЕВИЧА»
+
+        (СПбГУТ)
+        \end{singlespace}
+        \vspace{-1ex}
+        \rule{\textwidth}{0.4pt}
+        \vspace{-5ex}
+
+        Факультет \underline{Инфокоммуникационных сетей и систем}
+
+        Кафедра \underline{Защищенных систем связи}
+        \vspace{10ex}
+
+        \textbf{Лабораторная работа №2}\\
+        ИЗУЧЕНИЕ ПРАВДОСТУПА NTFS 
+
+
+    \end{center}
+    \vspace{4ex}
+    \begin{flushright}
+    \parbox{10 cm}{
+    \begin{flushleft}
+        Выполнили студенты группы ИКТЗ-83:
+
+        \underline{Громов А.А., Миколаени М.С.} \hfill \rule[-0.85ex]{0.1\textwidth}{0.6pt}\\
+        \vspace{-1ex}
+        \footnotesize \textit{ (Ф.И.О., № группы) \hfill (подпись)} \normalsize
+
+        Проверил:
+
+        \underline{Цветков А.Ю.} \hfill \rule[-0.85ex]{0.1\textwidth}{0.6pt}\\
+        \vspace{-1ex}
+        (\footnotesize \textit{уч. степень, уч. звание, Ф.И.О.) \hfill (подпись)} \normalsize
+
+    \end{flushleft}
+    }
+    \end{flushright}
+    \begin{center}
+        \vfill
+        Санкт-Петербург
+
+        2020
+
+    \end{center}
+    \newpage
+
+    \textbf{Цель лабораторной работы:}
+    \vspace{-2em}
+    \begin{enumerate}
+        \begin{singlespace}
+            \item Познакомиться с интерфейсом управления правами доступа.
+            \item Познакомиться с ролями "Файловые службы" и "Диспетчер ресурсов файлового сервера".
+            \item Организовать разграничение доступа к сетевым папкам пользователей.
+        \end{singlespace}
+    \end{enumerate}
+
+    Схема сети:
+    \begin{center}
+        \includegraphics{net.png}
+    \end{center}
+
+    \textbf{Пункт 13.b}
+    \begin{center}
+        \includegraphics[scale=0.4]{13.b.jpg}
+    \end{center}
+    \newpage
+    \textbf{Пункт 13.c}
+    \begin{center}
+        \includegraphics[scale=0.7]{13.c.png}
+    \end{center}
+    \textbf{Пункт 13.d}
+    \begin{center}
+        \includegraphics[scale=0.7]{13.d}
+    \end{center}
+    \newpage
+    \textbf{Пункт 13.e.1}
+    \begin{center}
+        \includegraphics[scale=0.7]{13.e.1}
+    \end{center}
+    \textbf{Пункт 13.e.2}
+    \begin{center}
+        \includegraphics[scale=0.7]{13.e.2}
+    \end{center}
+    \newpage
+    \textbf{Пункт 13.f}
+    \begin{center}
+        \includegraphics[scale=0.7]{13.f}
+    \end{center}
+    \textbf{Пункт 13.g}
+    \begin{center}
+        \includegraphics[scale=0.7]{13.g}
+    \end{center}
+    \newpage
+    \textbf{Пункт 13.h.1}
+    \begin{center}
+        \includegraphics[scale=0.7]{13.h.1}
+    \end{center}
+    \textbf{Пункт 13.h.2}
+    \begin{center}
+        \includegraphics[scale=0.7]{13.h.2}
+    \end{center}
+    \newpage
+    \textbf{Пункт 17}
+    \begin{center}
+        \includegraphics[scale=0.4]{17.jpg}
+    \end{center}
+    \newpage
+    \textbf{Пункт 18}
+    \begin{center}
+        \includegraphics[scale=0.4]{18.jpg}
+    \end{center}
+    \textbf{Пункт 19.1}
+    \begin{center}
+        \includegraphics[scale=0.45]{19.1}
+    \end{center}
+    \newpage
+    \textbf{Пункт 19.2}
+    \begin{center}
+        \includegraphics[scale=0.5]{19.2}
+    \end{center}
+    \textbf{Пункт 19.3}
+    \begin{center}
+        \includegraphics[scale=0.5]{19.3}
+    \end{center}
+    \newpage
+    \textbf{Пункт 20.1}
+    \begin{center}
+        \includegraphics[scale=0.5]{20.1}
+    \end{center}
+    \textbf{Пункт 20.2}
+    \begin{center}
+        \includegraphics[scale=0.6]{20.2}
+    \end{center}
+    \newpage
+    \textbf{Выводы}
+
+    В ходе данной лабораторной работы мы научились управлять правами доступа 
+    к папкам и файлам для разных пользователей. А также ознакомились с ролями
+    "Файловые службы" и "Диспетчер ресурсов файлового сервера". По итогам данной
+    лабораторной работы мы реализовали разграничение доступа к сетевым папкам
+    пользователей.
+
+   \end{document}
