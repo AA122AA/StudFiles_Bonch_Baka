@@ -1,0 +1,156 @@
+\documentclass[a4paper,14pt]{extarticle} 
+\usepackage[a4paper,top=1.5cm, bottom=1.5cm, left=2cm, right=1cm]{geometry}
+%\usepackage[T2A]{fontenc}
+%\usepackage[english, russian]{babel}
+\usepackage{graphicx}
+\graphicspath{{./pics/}}
+\DeclareGraphicsExtensions{.pdf,.png,}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{FreeSans}
+\setmonofont{FreeMono}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguages{english,russian}
+\usepackage{setspace}
+\usepackage[many]{tcolorbox}
+
+\begin{document}
+    \begin{center}
+        \thispagestyle{empty}
+        \begin{singlespace}
+        ФЕДЕРАЛЬНОЕ АГЕНТСТВО СВЯЗИ
+
+        ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ
+
+        УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ
+
+        «САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ ТЕЛЕКОММУНИКАЦИЙ ИМ. ПРОФ. М.А. БОНЧ-БРУЕВИЧА»
+
+        (СПбГУТ)
+        \end{singlespace}
+        \vspace{-1ex}
+        \rule{\textwidth}{0.4pt}
+        \vspace{-5ex}
+
+        Факультет \underline{Инфокоммуникационных сетей и систем}
+
+        Кафедра \underline{Защищенных систем связи}
+        \vspace{10ex}
+
+        \textbf{Лабораторная работа №3}\\
+        СОЗДАНИЕ И УПРАВЛЕНИЕ ОБЪЕКТАМИ ГРУППОВЫХ ПОЛИТИК 
+
+
+    \end{center}
+    \vspace{4ex}
+    \begin{flushright}
+    \parbox{10 cm}{
+    \begin{flushleft}
+        Выполнили студенты группы ИКТЗ-83:
+
+        \underline{Громов А.А., Миколаени М.С.} \hfill \rule[-0.85ex]{0.1\textwidth}{0.6pt}\\
+        \vspace{-1ex}
+        \footnotesize \textit{ (Ф.И.О., № группы) \hfill (подпись)} \normalsize
+
+        Проверил:
+
+        \underline{Цветков А.Ю.} \hfill \rule[-0.85ex]{0.1\textwidth}{0.6pt}\\
+        \vspace{-1ex}
+        (\footnotesize \textit{уч. степень, уч. звание, Ф.И.О.) \hfill (подпись)} \normalsize
+
+    \end{flushleft}
+    }
+    \end{flushright}
+    \begin{center}
+        \vfill
+        Санкт-Петербург
+
+        2020
+
+    \end{center}
+    \newpage
+
+    \textbf{Цель лабораторной работы:}
+    \vspace{-2em}
+    \begin{enumerate}
+        \begin{singlespace}
+            \item Создание и настройка объектов групповых политик.
+            \item Управление объектами групповых политик.
+            \item Настройка административных шаблонов.
+        \end{singlespace}
+    \end{enumerate}
+
+    Схема сети:
+    \begin{center}
+        \includegraphics{net.png}
+    \end{center}
+
+    \textbf{Пункт 6}
+    \begin{center}
+        \includegraphics[scale=0.6]{6.png}
+    \end{center}
+    \newpage
+    \textbf{Пункт 7}
+    \begin{center}
+        \includegraphics{7}
+    \end{center}
+    \textbf{Пункт 8}
+    \begin{center}
+        \includegraphics[scale=0.6]{8}
+    \end{center}
+    \newpage
+    \textbf{Пункт 9}
+    \begin{center}
+        \includegraphics[scale=0.6]{9}
+    \end{center}
+    \textbf{Пункт 10}
+    \begin{center}
+        \includegraphics[scale=0.6]{10}
+    \end{center}
+    \newpage
+    \textbf{Пункт 11}
+    \begin{center}
+        \includegraphics[scale=0.4]{11}
+    \end{center}
+    \textbf{Пункт 12}
+    \begin{center}
+        \includegraphics[scale=0.4]{12}
+    \end{center}
+    \newpage
+    \textbf{Пункт 13.1}
+    \begin{center}
+        \includegraphics[scale=0.6]{13.1}
+    \end{center}
+    \textbf{Пункт 13.2}
+    \begin{center}
+        \includegraphics[scale=0.6]{13.2}
+    \end{center}
+    \newpage
+    \textbf{Пункт 13.3}
+    \begin{center}
+        \includegraphics[scale=0.6]{13.3}
+    \end{center}
+    \textbf{Пункт 14.1}
+    \begin{center}
+        \includegraphics[scale=0.4]{14.1}
+    \end{center}
+    \newpage
+    \textbf{Пункт 14.2}
+    \begin{center}
+        \includegraphics[scale=0.4]{14.2}
+    \end{center}
+    \textbf{Пункт 14.3}
+    \begin{center}
+        \includegraphics[scale=0.4]{14.3}
+    \end{center}
+
+    \textbf{Вывод:}
+
+    В ходе данной лабораторной работы мы научились управлять групповыми 
+    политиками, настраивать административные шаблоны и преконфигурировать
+    интерфейс рабочего стола пользователей. Также мы реализовали 
+    подключение сетевых дисков для пользователей с сервера.
+\end{document}
