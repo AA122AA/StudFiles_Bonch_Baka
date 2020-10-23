@@ -1,0 +1,7 @@
+*.log
+*.aux
+*.gz
+*.fls
+*.fdb_latexmk
+lessons/Lesson_*.synctex.gz
+**/.DS_Store
