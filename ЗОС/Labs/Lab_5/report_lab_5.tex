@@ -1,0 +1,126 @@
+\documentclass[a4paper,14pt]{extarticle} 
+\usepackage[a4paper,top=1.5cm, bottom=1.5cm, left=2cm, right=1cm]{geometry}
+%\usepackage[T2A]{fontenc}
+%\usepackage[english, russian]{babel}
+\usepackage{graphicx}
+\graphicspath{{./pics/}}
+\DeclareGraphicsExtensions{.pdf,.png,}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{FreeSans}
+\setmonofont{FreeMono}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguages{english,russian}
+\usepackage{setspace}
+\usepackage[many]{tcolorbox}
+
+\begin{document}
+    \begin{center}
+        \thispagestyle{empty}
+        \begin{singlespace}
+        ФЕДЕРАЛЬНОЕ АГЕНТСТВО СВЯЗИ
+
+        ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ
+
+        УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ
+
+        «САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ ТЕЛЕКОММУНИКАЦИЙ ИМ. ПРОФ. М.А. БОНЧ-БРУЕВИЧА»
+
+        (СПбГУТ)
+        \end{singlespace}
+        \vspace{-1ex}
+        \rule{\textwidth}{0.4pt}
+        \vspace{-5ex}
+
+        Факультет \underline{Инфокоммуникационных сетей и систем}
+
+        Кафедра \underline{Защищенных систем связи}
+        \vspace{10ex}
+
+        \textbf{Лабораторная работа №5}\\
+        НАСТРОЙКА МАРШРУТИЗАЦИИ И СЕТЕВЫХ ПОЛИТИК
+
+
+    \end{center}
+    \vspace{4ex}
+    \begin{flushright}
+    \parbox{10 cm}{
+    \begin{flushleft}
+        Выполнили студенты группы ИКТЗ-83:
+
+        \underline{Громов А.А., Миколаени М.С.} \hfill \rule[-0.85ex]{0.1\textwidth}{0.6pt}\\
+        \vspace{-1ex}
+        \footnotesize \textit{ (Ф.И.О., № группы) \hfill (подпись)} \normalsize
+
+        Проверил:
+
+        \underline{Цветков А.Ю.} \hfill \rule[-0.85ex]{0.1\textwidth}{0.6pt}\\
+        \vspace{-1ex}
+        (\footnotesize \textit{уч. степень, уч. звание, Ф.И.О.) \hfill (подпись)} \normalsize
+
+    \end{flushleft}
+    }
+    \end{flushright}
+    \begin{center}
+        \vfill
+        Санкт-Петербург
+
+        2020
+
+    \end{center}
+    \newpage
+
+    \textbf{Цель лабораторной работы:}
+    \vspace{-2em}
+    \begin{enumerate}
+        \begin{singlespace}
+            \item Установка службы политики сети и доступа.
+            \item Настройка маршутизации.
+            \item Настройка RADIUS-сервера.
+            \item Тестирование аутентификации на сетевом оборудовании.
+        \end{singlespace}
+    \end{enumerate}
+
+    Схема сети:
+    \begin{center}
+        \includegraphics{net.png}
+    \end{center}
+
+    \textbf{пункт 16}
+    \begin{center}
+        \includegraphics[scale=0.4]{16.png}
+    \end{center}
+    \newpage
+    \textbf{пункт 17}
+    \begin{center}
+        \includegraphics[scale=0.4]{17.png}
+    \end{center}
+   
+    \textbf{пункт 18.1}
+    \begin{center}
+        \includegraphics[scale=0.7]{18.1.png}
+    \end{center}
+    
+    \newpage
+    \textbf{пункт 18.2}
+    \begin{center}
+        \includegraphics[scale=0.4]{18.2.png}
+    \end{center}
+    
+    \textbf{пункт 19}
+    \begin{center}
+        \includegraphics[scale=0.4]{19.png}
+    \end{center}
+    
+    \newpage
+    \textbf{пункт 26}
+    \begin{center}
+        \includegraphics[scale=0.8]{26.png}
+    \end{center}
+    \textbf{Вывод:}
+
+    В ходе данной лабораторной работы мы узнали как создавать маршрутизатор на базе Windows Server. А также настроили RADIUS для аутентификации компьютера-клиента.
+\end{document}
