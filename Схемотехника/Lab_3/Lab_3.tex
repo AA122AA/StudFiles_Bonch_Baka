@@ -123,7 +123,7 @@
             \caption{Измерение АЧХ каскада с ОК}
             \begin{tabular}{ |c|c|c|c|c| }
                 \hline
-                Kскв, Дб & (Kскв -3), Дб&fн, Гц & fв, МГц & ∆f=fв−fн, МГц \\
+                $K_{\text{скв}}$, Дб & ($K_{\text{скв}}$ - 3), Дб&fн, Гц & fв, МГц & ∆f=fв−fн, МГц \\
                 \hline 
                 -2.7 & -5.7 & 41 & 18.6 & 18.56\\
                 \hline
@@ -136,6 +136,7 @@
         \begin{itemize}
             \item Схема с ОК не инвертирует входной сигнал.
             \item У схемы каскада с ОК рабочая полоса частот больше, чем у схемы с ОЭ.
+            \item Схема каскада с ОК, в отличие от схемы касакада с ОЭ, ослабляет сигнал. 
         \end{itemize}
     \end{singlespace}
 
@@ -175,15 +176,24 @@
             \end{tabular}
         \end{center}
     \end{table}
+
+    \textbf{Выводы по пункту 4:}
+    \vspace{-6ex}
+    \begin{singlespace}
+        \begin{itemize}
+            \item Измеренный спад вершины импульса практически совпадает с рассчитанным спадом вершины импульса;
+            \item Измеренное время нарастания импульса практически совпадает с рассчитанное временем нарастания импульса;
+        \end{itemize}
+    \end{singlespace}
+
     \newpage
     \textbf{Пункт 5}
-
     \begin{table}[ht]
         \begin{center}
             \caption{Оценка влияния параметров схемы на ПХ и АЧХ}
             \begin{tabular}{|c|c|c|c|c|c|c|c|}
                 \hline 
-                № & $R_1$ & $R_2$ & $K_{\text{скв}}$ & $f_{\text{н}}$ & $f_{\text{в}}$ & \parbox[c]{4cm}{\begin{center}∆ \\\vspace{-1.5ex}при $t_{\text{и}}$= 25 мкс \end{center}} & \parbox[c]{4cm}{\begin{center}$t_{n}$ \\\vspace{-1.5ex}при $t_{\text{и}}$= 1.25 мс \end{center}}
+                № & $R_1$ & $R_2$ & $K_{\text{скв}}$ & $f_{\text{н}}$ & $f_{\text{в}}$ & \parbox[c]{4cm}{\begin{center}∆ \\при $t_{\text{и}}$= 25 мкс \end{center}} & \parbox[c]{4cm}{\begin{center}$t_{n}$ \\при $t_{\text{и}}$= 1.25 мс \end{center}}
                 \tabularnewline
                 \hline 
                 п/п & кОм & кОм & дБ & Гц & МГц & \% & нс
@@ -202,10 +212,9 @@
                 \tabularnewline
                 \hline        
             \end{tabular}
-
-           
         \end{center}
     \end{table}
+
     \begin{center}
         \includegraphics[scale=0.3]{5.5.jpg}
     \end{center}
@@ -242,4 +251,15 @@
 
     ПФ при f = 400Гц, $R_2$ = 3.6кОм 
 
+    \textbf{Выводы по пункту 5:}
+    \vspace{-6ex}
+    \begin{singlespace}
+        \begin{itemize}
+           \item Увеличение $R_1$ уменьшает измеренный спад вершины импульса и увеличивает 
+           $t_{\text{и}}$, а увеличение $R_2$ практически не оказывает эффекта на эти параметры 
+           \item Увеличение $R_1$ уменьшает $K_{\text{скв}}$, а также сдвигает вниз по 
+           частоте $f_{\text{н}}$ и $f_{\text{в}}$ и уменьшает рабочий диапазон частот. 
+           Увеличение $R_2$ незначительно влияет на эти параметры.
+        \end{itemize}
+    \end{singlespace}
 \end{document}
