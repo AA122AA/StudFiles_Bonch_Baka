@@ -71,46 +71,57 @@
     \begin{center}
         \includegraphics[scale=0.25]{1.jpg}
     \end{center}
-    Окно измерения входного сопротивления 
 
-    \begin{tabular}{ |c|c| }
-        \hline
-        Измерение & Величина входного сопротивления, КОм\\
-        \hline
-        с учётом сопротивления Rб & 31.6\\
-        \hline
-        без учёта сопротивления Rб & 2.91\\
-        \hline
-    \end{tabular}
+    Окно измерения входного сопротивления 
+    \begin{table}[ht]
+        \begin{center}
+            \caption{Измерение входного сопротивления каскада с ОК}
+            \begin{tabular}{ |c|c| }
+                \hline
+                Измерение & Величина входного сопротивления, КОм\\
+                \hline
+                с учётом сопротивления Rб & 31.6\\
+                \hline
+                без учёта сопротивления Rб & 2.91\\
+                \hline
+            \end{tabular}
+        \end{center}
+    \end{table}
 
     \newpage
     \textbf{Пункт 2:}
     \begin{center}
         \includegraphics[scale=0.25]{2.jpg}
     \end{center}
-    сопротивление 17.29\\
-    сопротивление 16.95\\
 
-    
+    сопротивление 17.29
+
+    сопротивление 16.95
+
+    \newpage 
     \textbf{Пункт 3:}
     \begin{center}
-        \includegraphics[scale=0.25]{3.jpg}
+        \includegraphics[scale=0.25]{3.1.jpg}
     \end{center}
     \begin{center}
-        \includegraphics[scale=0.25]{4.jpg}
+        \includegraphics[scale=0.25]{3.2.jpg}
     \end{center}
     \begin{center}
-        \includegraphics[scale=0.25]{5.jpg}
+        \includegraphics[scale=0.25]{3.3.jpg}
     \end{center}
 
-    \begin{tabular}{ |c|c|c|c|c| }
-       \hline
-       Kскв, Дб & (Kскв -3), Дб&fн, Гц & fв, МГц & ∆f=fв−fн, МГц \\
-       \hline 
-       -2.7 & -5.7 & 41 & 18.6 & 18.56\\
-       \hline
-    \end{tabular}\\
-
+    \begin{table}[ht]
+        \begin{center}
+            \caption{Измерение АЧХ каскада с ОК}
+            \begin{tabular}{ |c|c|c|c|c| }
+                \hline
+                Kскв, Дб & (Kскв -3), Дб&fн, Гц & fв, МГц & ∆f=fв−fн, МГц \\
+                \hline 
+                -2.7 & -5.7 & 41 & 18.6 & 18.56\\
+                \hline
+            \end{tabular}\\
+        \end{center}
+    \end{table}
     Выводы по пункту 3:
 
     Схема не инвертирует входной сигнал.
@@ -118,32 +129,105 @@
     У схемы с ОК рабочая полоса частот больше чем у схему с ОУ
 
     \newpage
-    \begin{tabular}{|>{\centering}m{6cm}|>{\centering}m{5cm}|>{\centering}m{5cm}|}
-        \hline 
-        Время импульса & tи=25 мкс & tи=1.25 мкс\\
-        \hline 
-        Частота f, Гц & 20000 & 400\\
-        \hline 
-        Осциллограмма импульса & & \\
-        \hline 
-        Измеренный спад вершины импульса ∆, \% & & 27.9\\
-        \hline 
-        Рассчитанный спад вершины импульса ∆, \% & 0.62 & 31.4 \\
-        \hline 
-        Осциллограмма увеличенной области нарастания импульса & & \\
-        \hline 
-        Измеренное время нарастания импульса tН =t2 –t1,нс & 19.12 & \\
-        \hline 
-        Рассчитанное время нарастания импульса tн, нс & 18.8 & 18.8\\
-        \hline 
-    \end{tabular}
+    \textbf{Пункт 4:}
 
-    \begin{tabular}{|>{\centering}p{3.5cm}|>{\centering}p{3.5cm}|>{\centering}p{3.5cm}|}
-        Geometry  & Algebra &
-        \tabularnewline
-        \hline
-         Points & Addition &
-        \tabularnewline
-         Spheres & Multiplication 
-    \end{tabular} 
+    \begin{table}[ht]
+        \begin{center}
+            \caption{Измерение ПХ каскада с ОК}
+            \begin{tabular}{|>{\centering}m{5cm}|>{\centering}m{5.5cm}|>{\centering}m{5cm}|}
+                \hline 
+                Время импульса & $t_{\text{и}}$= 25 мкс & $t_{\text{и}}$=1.25 мс
+                \tabularnewline
+                \hline
+                Частота f, Гц & 20000 & 400
+                \tabularnewline
+                \hline 
+                Осциллограмма импульса & \vspace{1cm}\includegraphics[scale=0.08]{4.jpg}&
+                \tabularnewline
+                \hline 
+                \parbox[c][3cm]{5cm}{Измеренный спад вершины импульса ∆, \% \\$∆=\frac{U_{\text{уст}}-U_{\text{вых}}}{U_{\text{уст}}} \cdot 100\%$}& & 27.9
+                \tabularnewline
+                \hline 
+                Рассчитанный спад вершины импульса ∆, \% & 0.62 & 31.4 
+                \tabularnewline
+                \hline 
+                Осциллограмма увеличенной области нарастания импульса & & 
+                \tabularnewline
+                \hline 
+                \parbox[c][3cm]{5cm}{Измеренное время нарастания импульса \\ $t_{\text{Н}}$ = $t_{\text{2}}$ – $t_{\text{1}}$, нс} & 19.12 &
+                \tabularnewline
+                \hline 
+                Рассчитанное время нарастания импульса $t_{\text{н}}$, нс & 18.8 & 18.8
+                \tabularnewline
+                \hline 
+            \end{tabular}
+        \end{center}
+    \end{table}
+    \newpage
+    \textbf{Пункт 5}
+
+    \begin{table}[ht]
+        \begin{center}
+            \caption{Оценка влияния параметров схемы на ПХ и АЧХ}
+            \begin{tabular}{|c|c|c|c|c|c|c|c|}
+                \hline 
+                № & $R_1$ & $R_2$ & $K_{\text{скв}}$ & $f_{\text{н}}$ & $f_{\text{в}}$ & \parbox[c]{4cm}{\begin{center}∆ \\\vspace{-1.5ex}при $t_{\text{и}}$= 25 мкс \end{center}} & \parbox[c]{4cm}{\begin{center}$t_{n}$ \\\vspace{-1.5ex}при $t_{\text{и}}$= 1.25 мс \end{center}}
+                \tabularnewline
+                \hline 
+                п/п & кОм & кОм & дБ & Гц & МГц & \% & нс
+                \tabularnewline
+                \hline 
+                1 & 1 & 3,6 & -2,7 & 41 & 18,6 & 27.9 & 19.12
+                \tabularnewline
+                \hline 
+                2 & 1 & 10 & -2,7 & 41 & 18,6 & 27.2 & 19.3
+                \tabularnewline
+                \hline        
+                3 & 5 & 3,6 & -8.8 & 13.8 & 11 & 15 & 46.44
+                \tabularnewline
+                \hline        
+                4 & 5 & 10 & -8,8 & 13,6 & 11,1 & 13.8 & 46.67 
+                \tabularnewline
+                \hline        
+            \end{tabular}
+
+           
+        \end{center}
+    \end{table}
+    \begin{center}
+        \includegraphics[scale=0.3]{5.5.jpg}
+    \end{center}
+
+    ачх при $R_2$ = 3.6кОм
+
+    \begin{center}
+        \includegraphics[scale=0.3]{5.6.jpg}
+    \end{center}
+
+    ачх при $R_2$ = 10кОм
+
+    \begin{center}
+        \includegraphics[scale=0.3]{5.1.jpg}
+    \end{center}
+
+    $R_2$ = 3.6кОм f = 20кГц
+
+    \begin{center}
+        \includegraphics[scale=0.3]{5.2.jpg}
+    \end{center}
+
+    $R_2$ = 10ОкОм f=20кГц
+
+    \begin{center}
+        \includegraphics[scale=0.3]{5.3.jpg}
+    \end{center}
+    
+    f = 400Гц $R_2$ = 10кОм 
+
+    \begin{center}
+        \includegraphics[scale=0.3]{5.4.jpg}
+    \end{center}
+
+    f = 400Гц $R_2$ = 3.6кОм 
+
 \end{document}
