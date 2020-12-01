@@ -45,7 +45,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 9100
+          R: 7500
       - ID: 11
         Type: 1000  # R
         Name: R8
@@ -56,7 +56,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 3000
+          R: 2700
       - ID: 12
         Type: 1000  # R
         Name: R9
@@ -67,7 +67,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 360
+          R: 300
       - ID: 13
         Type: 1000  # R
         Name: R10
@@ -78,7 +78,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 910
+          R: 750
       - ID: 15
         Type: 1000  # R
         Name: R11
@@ -89,7 +89,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 220
+          R: 180
       - ID: 28
         Type: 2010  # U
         Name: U1
@@ -102,7 +102,7 @@ scm:
         Params:
           ST: 1
           DC:
-            U0: 11
+            U0: 9
             Delay: 0
             TFR: 1n
           AC:

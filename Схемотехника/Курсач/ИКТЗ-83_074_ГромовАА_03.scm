@@ -3,8 +3,8 @@ scm:
   MinorVersion: 1
   General:
     Scale: 76
-    HPos: 2049
-    VPos: 1347
+    HPos: 1803
+    VPos: 1350
     SWidth: 3000
     SHeight: 3000
   Special:
@@ -13,17 +13,29 @@ scm:
     MajorSchVer: 3
     MinorSchVer: 0
     Objects:
-      - ID: 183
-        Type: 1000  # R
-        Name: R11
-        X: 1252
-        Y: 1336
+      - ID: 194
+        Type: 1001  # C
+        Name: C5
+        X: 1336
+        Y: 1368
         Rot: 1
         FlipV: 0
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 22
+          C: 5u
+          IC: 0
+      - ID: 205
+        Type: 1000  # R
+        Name: R11
+        X: 1252
+        Y: 1368
+        Rot: 1
+        FlipV: 0
+        FlipH: 0
+        active_property_page: 0
+        Params:
+          R: 180
       - ID: 158
         Type: 1000  # R
         Name: R2н
@@ -69,7 +81,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 4700
+          R: 3.6k
       - ID: 120
         Type: 1001  # C
         Name: C16
@@ -92,7 +104,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 270
+          R: 12k
       - ID: 128
         Type: 1001  # C
         Name: C7
@@ -126,7 +138,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 9.1к
+          R: 7.5к
       - ID: 100
         Type: 1000  # R
         Name: R12
@@ -137,7 +149,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 9.1к
+          R: 7.5к
       - ID: 106
         Type: 1001  # C
         Name: C6
@@ -160,7 +172,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 910
+          R: 750
       - ID: 80
         Type: 1001  # C
         Name: C14
@@ -240,7 +252,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 360
+          R: 300
       - ID: 64
         Type: 1001  # C
         Name: C13
@@ -285,7 +297,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 5.1k
+          R: 3.9k
       - ID: 52
         Type: 1001  # C
         Name: C4
@@ -344,7 +356,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 3.3k
+          R: 2.7k
       - ID: 21
         Type: 1001  # C
         Name: C2
@@ -367,7 +379,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 1.1М
+          R: 0.91М
       - ID: 8
         Type: 1000  # R
         Name: R2
@@ -378,7 +390,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 3.9M
+          R: 2M
       - ID: 6
         Type: 1001  # C
         Name: C1
@@ -504,7 +516,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 15k
+          R: 62k
       - ID: 19
         Type: 1000  # R
         Name: R4
@@ -515,7 +527,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 1.8k
+          R: 6.2k
       - ID: 23
         Type: 300  # CON
         Name: CON23
@@ -645,7 +657,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 9.1к
+          R: 7.5к
       - ID: 49
         Type: 1000  # R
         Name: R8
@@ -656,7 +668,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 3к
+          R: 2.7к
       - ID: 51
         Type: 300  # CON
         Name: CON51
@@ -788,7 +800,7 @@ scm:
       - ID: 95
         Type: 300  # CON
         Name: CON95
-        X: 984
+        X: 980
         Y: 1444
         Rot: 0
         FlipV: 0
@@ -797,7 +809,7 @@ scm:
       - ID: 103
         Type: 300  # CON
         Name: CON103
-        X: 1324
+        X: 1336
         Y: 1444
         Rot: 0
         FlipV: 0
@@ -987,7 +999,7 @@ scm:
       - ID: 169
         Type: 300  # CON
         Name: CON169
-        X: 1256
+        X: 1252
         Y: 1296
         Rot: 0
         FlipV: 0
@@ -1101,73 +1113,20 @@ scm:
         FlipV: 0
         FlipH: 0
         active_property_page: 0
-      - ID: 194
-        Type: 1001  # C
-        Name: C18
-        X: 1336
-        Y: 1408
-        Rot: 1
-        FlipV: 0
-        FlipH: 0
-        active_property_page: 0
-        Params:
-          C: 5u
-          IC: 0
-      - ID: 196
-        Type: 1000  # R
-        Name: R22
-        X: 1260
-        Y: 1416
-        Rot: 1
-        FlipV: 0
-        FlipH: 0
-        active_property_page: 0
-        Params:
-          R: 198
       - ID: 198
         Type: 300  # CON
         Name: CON198
-        X: 1260
-        Y: 1464
+        X: 1252
+        Y: 1444
         Rot: 0
         FlipV: 0
         FlipH: 0
         active_property_page: 0
-      - ID: 199
-        Type: 1001  # C
-        Name: C19
-        X: 1340
-        Y: 1332
-        Rot: 1
-        FlipV: 0
-        FlipH: 0
-        active_property_page: 0
-        Params:
-          C: 1п
-          IC: 0
       - ID: 201
         Type: 300  # CON
         Name: CON201
         X: 1324
         Y: 1296
-        Rot: 0
-        FlipV: 0
-        FlipH: 0
-        active_property_page: 0
-      - ID: 202
-        Type: 300  # CON
-        Name: CON202
-        X: 1336
-        Y: 1372
-        Rot: 0
-        FlipV: 0
-        FlipH: 0
-        active_property_page: 0
-      - ID: 204
-        Type: 300  # CON
-        Name: CON204
-        X: 1260
-        Y: 1376
         Rot: 0
         FlipV: 0
         FlipH: 0
@@ -1972,22 +1931,10 @@ scm:
           ID: 26
           pin: 3
       - obj1:
-          ID: 169
-          pin: 4
-        obj2:
-          ID: 183
-          pin: 1
-      - obj1:
           ID: 194
           pin: 2
         obj2:
           ID: 103
-          pin: 2
-      - obj1:
-          ID: 196
-          pin: 2
-        obj2:
-          ID: 198
           pin: 2
       - obj1:
           ID: 95
@@ -2008,47 +1955,29 @@ scm:
           ID: 201
           pin: 1
       - obj1:
-          ID: 199
-          pin: 1
-        obj2:
-          ID: 201
-          pin: 3
-      - obj1:
           ID: 86
           pin: 4
         obj2:
           ID: 201
           pin: 2
       - obj1:
-          ID: 199
-          pin: 2
-        obj2:
-          ID: 202
-          pin: 2
-      - obj1:
-          ID: 202
-          pin: 4
+          ID: 201
+          pin: 3
         obj2:
           ID: 194
           pin: 1
       - obj1:
-          ID: 196
+          ID: 205
           pin: 1
         obj2:
-          ID: 204
+          ID: 169
           pin: 4
       - obj1:
-          ID: 183
+          ID: 205
           pin: 2
         obj2:
-          ID: 204
+          ID: 198
           pin: 2
-      - obj1:
-          ID: 202
-          pin: 1
-        obj2:
-          ID: 204
-          pin: 3
   TD:
     Expressions:
       - plot: 1

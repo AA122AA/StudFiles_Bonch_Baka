@@ -25,7 +25,7 @@ scm:
         Params:
           ST: 1
           DC:
-            U0: 11
+            U0: 9
             Delay: 0
             TFR: 1n
           AC:
@@ -78,7 +78,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 15k
+          R: 62k
       - ID: 5
         Type: 1000  # R
         Name: R4
@@ -89,7 +89,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 1.8k
+          R: 6.2k
       - ID: 7
         Type: 1000  # R
         Name: R5
@@ -100,7 +100,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 5.1к
+          R: 3.9к
       - ID: 8
         Type: 1000  # R
         Name: R6
@@ -111,7 +111,7 @@ scm:
         FlipH: 0
         active_property_page: 0
         Params:
-          R: 3.3k
+          R: 2.7k
       - ID: 14
         Type: 1100  # NLR
         Name: NLR1
@@ -134,7 +134,7 @@ scm:
             y:
               - 0
               - 0.00017999999999999998
-              - 0.00059999999999999995
+              - 0.00060000000000000006
               - 0.0015
               - 0.0027000000000000001
               - 0.0040999999999999995
