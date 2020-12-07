@@ -19,7 +19,8 @@
 \usepackage[many]{tcolorbox}
 \usepackage{array}
 \usepackage{longtable}
-\usepackage{multicol}
+\usepackage{multicol} 
+\usepackage{caption}
 
 \begin{document}
     \begin{center}
@@ -237,6 +238,11 @@
         \caption{Частотные характеристики ОУ.}
     \end{figure}
 
+    \begin{center}
+        \mu = 224, $f_{P1}$=2.9 МГц, $f_{P2}$=1.3 ГГц, $f_1$=640 МГц
+    \end{center}
+
+    \vspace{-0,5cm}
     Режим ОУ с ОС получается при подключении к подсхеме резисторов ОС R1 и 
     R2 (рис. 5). Для получения заданных коэффициентов усиления с ОС $K_F$, 
     равными 100 и 10, необходимо включить требуемые сопротивления 
@@ -249,30 +255,50 @@
         \begin{center}
             \includegraphics[scale=0.5]{6.png}
         \end{center}
+        \vspace{-1cm}
         \caption{Инвертирующий усилитель.}
     \end{figure}
 
+    \textbf{Вывод по заданию:}
+
+    \begin{itemize}
+        \item Рассчитанные и полученные по АЧХ частоты полюсов совпадают, а
+              частота единичного усиления практически совпадает с 
+              теоретической.
+        \item Условия сдвига фаз по ФЧХ для каждого полюса совпадают с 
+              теоретическими требованиями к фЧХ двуполюсного усилителя.
+    \end{itemize}
+    \newpage
     \begin{center}
         \textbf{Задание 3.}
     \end{center}
 
     \begin{figure}[h!]
+        \captionsetup{justification=centering}
         \begin{center}
             \includegraphics[scale=0.6]{7.png}
         \end{center}
         \caption{График АЧХ. Красная линия- $K_F$=10; $f_\text{гран}$=64МГц | Синяя линия- $K_F$=100; $f_\text{гран}$=9.3 МГц.}
     \end{figure}
 
-    \begin{figure}
+    \begin{figure}[h!]
         \begin{center}
             \includegraphics[scale=0.6]{8.png}
         \end{center}
         \caption{График ФЧХ. Красная линия - $K_F$=10, Синяя линия- $K_F$=100.}
     \end{figure}
 
+    \textbf{Вывод по заданию:}
+
+    \begin{itemize}
+        \item Значения коэффициента усиления, полученные по АЧХ и теоретически рассчитанные, практически совпадают.
+    При этом отношение рассичтанных $K_{f1}$ и $K_{f2}$ и полученных из АЧХ совпадают.
+    \end{itemize}
+
     \begin{center}
         \textbf{Задание 4.}
     \end{center}
+
     Инвертирующий усилитель с высоким входным сопротивлением
     
     Для получения высокого входного сопротивления в инвертирующем 
@@ -294,24 +320,26 @@
 
     Входное сопротивление инвертирующего усилителя равно 13,6кОм
 
+    \textbf{Вывод по заданию:}
+
+    \begin{itemize}
+        \item Входное сопротивление инвертирующего усилителя, вычисленное в Fastmean, практическии совпадает с теоретическим.
+    \end{itemize}
+
+    \newpage
     \begin{center}
         \textbf{Задание 5.}
     \end{center}
-    \vspace{-0.5cm}
     \begin{figure}[h!]
         \begin{center}
             \includegraphics[scale=0.4]{11.png}
         \end{center}
-        \vspace{-0.7cm}
         \caption{Инвертирующий ОУ с высоким входным сопротивлением.}
-    \end{figure}
-    \vspace{-0.7cm}
-    \begin{figure}[h!]
         \begin{center}
             \includegraphics[scale=0.5]{12.png}
         \end{center}
-        \vspace{-0.7cm}
         \caption{График входного сопротивления.}
+        \vspace{-0.7cm}
     \end{figure}
 
     Входное сопротивление инвертирующего ОУ с высоким входным сопротивлением равно 2.04 МОм.
@@ -319,17 +347,19 @@
     Рассчитать элементы цепи ОС по заданному коэффициенту усиления КF = 100
     и КF = 10.
     \begin{multicols}{2}
-    \noindent KF = 10\\
-    КF = (1+R5/R6)*R4/R3\\
-    R3 = 1000 Ом\\
-    R3 = R4 = 1 МОм\\
-    \columnbreak
-    R5 = 9*R6 = 9 кОм\\
-    KF = 100\\
-    КF = (1+R5/R6)*R4/R3\\
-    R3 = 1000 Ом\\
-    R3 = R4 = 1 МОм\\
-    R5 = 99*R6 = 99 кОм\\
+        \begin{tabbing}
+            \noindent KF = 10\=\\
+            \>КF = (1+R5/R6)*R4/R3\\
+            \>R3 = 1000 Ом\\
+            \>R3 = R4 = 1 МОм\\
+            \>R5 = 9*R6 = 9 кОм\\\\
+
+            KF = 100\=\\
+            \>КF = (1+R5/R6)*R4/R3\\
+            \>R3 = 1000 Ом\\
+            \>R3 = R4 = 1 МОм\\
+            \>R5 = 99*R6 = 99 кОм\\
+        \end{tabbing}
     \end{multicols}
     \begin{figure}[h!]
         \begin{center}
@@ -357,11 +387,19 @@
     входного постоянного тока ОУ. Его сопротивление может составлять 
     десятки и сотни кОм. Оно определяет входное сопротивление ОП. При этом 
     следует помнить о входных токах ОУ.
+
+    \textbf{Вывод по заданию:}
+
+    \begin{itemize}
+        \item Входное сопротивление инвертирующего усилителя с высоким входным сопротивлением почти на 3 порядка больше, чем у инвертирующего усилителя.
+    \end{itemize}
+
     \newpage
 
     \begin{center}
         \textbf{Задание 6.}
     \end{center}
+    \vspace{-0,5cm}
     \begin{figure}[h!]
         \begin{center}
             \includegraphics[scale=0.5]{15.png}
@@ -370,9 +408,19 @@
         \caption{График АЧХ ОП.}
     \end{figure}
 
+    \vspace{-0,5cm}
+    \textbf{Вывод по заданию:}
+    \vspace{-0,5cm}
+
+    \begin{itemize}
+        \item В отличие от АЧХ усиления без ОС, АЧХ операционного повторителя имеет большую рабочую полосу частот, а максимум его АЧХ равен 0 дБ.
+    \end{itemize}
+
+    \vspace{-0,5cm}
     \begin{center}
         \textbf{3.2.1.2. Характеристики во временной области.}
     \end{center}
+    \vspace{-0,5cm}
 
     Переходную характеристику (ПХ) усилителя получаем при подаче на его 
     вход напряжения прямоугольной формы. Для этого в схемах на рис. 5 и 16 
@@ -380,17 +428,19 @@
     меандр. Задать двухполярный сигнал ±1 мВ и длительность импульса $t_\text{и}$= 
     25 мкс.
 
+    \vspace{-0,5cm}
     \begin{center}
         \textbf{Задание 7.}
     \end{center}
     
     \begin{figure}[h!]
         \begin{center}
-            \includegraphics[scale=0.25]{16.png}
+            \includegraphics[scale=0.24]{16.png}
         \end{center}
         \vspace{-0.7cm}
         \caption{График ПХ операционного повторителя.}
     \end{figure}
+    \vspace{2cm}
 
     \begin{figure}[h!]
         \begin{center}
@@ -399,6 +449,14 @@
         \vspace{-0.7cm}
         \caption{График ПХ инвертирующего ОУ с высоким входным сопротивлением.}
     \end{figure}
+
+    \textbf{Вывод по заданию:}
+
+    \begin{itemize}
+        \item По ПХ операционного повторителя видно, что она практически в точности повторяет входной сигнал источника напряжения.
+        \item По ПХ инвертирующего усилителя можно сделать вывод о том, что данное устроиство инфертирует входной сгнал и усиливает его в Kf раз.
+    \end{itemize}
+
 
     \begin{center}
         \textbf{3.2.2. Схемы на ОУ с частотно-зависимой ОС.}
@@ -434,6 +492,7 @@
         \caption{Схема интегратора.}
     \end{figure}
 
+    \newpage
     \begin{center}
         \textbf{Задание 8.}
     \end{center}
@@ -454,12 +513,19 @@
         \caption{ Схема дифференциатора.}
     \end{figure}
 
+    \textbf{Вывод по заданию:}
+
+    \begin{itemize}
+        \item По АЧХ схемы видно, что выполняется условие падения АЧХ на 6дБ/октава, а значит, что схема действительно работает как интегратор.
+    \end{itemize}
+
     \newpage
     \begin{center}
         \textbf{Задание 9.}
     \end{center}
 
     \begin{figure}[h!]
+        \captionsetup{justification=centering}
         \begin{center}
             \includegraphics[scale=0.6]{22.png}
         \end{center}
@@ -467,6 +533,7 @@
         \caption{График АЧХ дифференциатора (красная линия) и АЧХ ОУ без ОС (синяя линия).} 
     \end{figure}
     \begin{figure}[h!]
+        \captionsetup{justification=centering}
         \begin{center}
             \includegraphics[scale=0.6]{23.png}
         \end{center}
@@ -480,20 +547,29 @@
     Использование ПК существенно облегчает решение этой задачи. На рис. 26 
     показан вариант выполнения разрыва петли ОС на ПК в схеме на рис. 23.
 
-    \begin{figure}[h!]
+    \begin{figure}
         \begin{center}
-            \includegraphics[scale=0.6]{24.png}
+            \includegraphics[scale=0.5]{24.png}
         \end{center}
         \vspace{-0.7cm}
         \caption{Схема дифференциатора с разомкнутой петлей ОС.}
     \end{figure}
- 
+    
+    \begin{figure}
+        \textbf{Вывод по заданию:}
+
+        \begin{itemize}
+            \item Изменение значения $R_0$ сглаживает выброс на АЧХ, а при значении $R_0$ = 240 Ом данный выброс перестает иметь место. Помимо этого, данное сопротивление не оказывает никаого влияния на рабочий диапазон частот.
+        \end{itemize}
+    \end{figure}
+  
     \newpage
     \begin{center}
         \textbf{Задание 10.}
     \end{center}
-    \vspace{-1cm}
+    \vspace{-0.5cm}
     \begin{figure}[h!]
+        \captionsetup{justification=centering}
         \begin{center}
             \includegraphics[scale=0.5]{25.png}
         \end{center}
@@ -503,13 +579,21 @@
  
     \begin{figure}[h!]
         \begin{center}
-           \includegraphics[scale=1]{26.png}
-            \includegraphics[scale=1]{27.png}           
+           \includegraphics[scale=0.8]{26.png}
+           \includegraphics[scale=0.8]{27.png}           
         \end{center}
-        \caption{Значения АЧХ и ФЧХ, при значении АЧХ = 0Дб}
         \vspace{-0.7cm}
+        \caption{Значения АЧХ и ФЧХ, при значении АЧХ = 0Дб}
+        \vspace{-0.5cm}
     \end{figure}   
 
+    \vspace{1.5cm}
+    \textbf{Вывод по заданию:}
+
+    \begin{itemize}
+        \item Изменение $R_0$ практически не влияет на значение частоты единичного усиления, а на ФЧХ происходит значительное изменение запаса устойчивости по фазе.
+    \end{itemize}
+ 
     \begin{center}
         \textbf{3.2.2.2. Характеристики во временной области.}
     \end{center}
@@ -534,7 +618,7 @@
         \caption{График линейного закона интегрирования.}
     \end{figure}
 
-    \begin{figure}
+    \begin{figure}[h!]
         \begin{center}
             \includegraphics[scale=0.5]{29.png}
         \end{center}
@@ -542,7 +626,13 @@
         \caption{График экспоненциального закона интегрирования.}
         $t_\text{имакс}$=500 мкс
     \end{figure}
-    
+    \begin{figure}[h!]
+       \textbf{Вывод по заданию:}
+
+        \begin{itemize}
+            \item При значении длительности входного импульса равном 670мкс, линейный закон интегрирования переходит в экспоненциальный.
+        \end{itemize}
+    \end{figure}
 
     \newpage
     \begin{center}
@@ -557,19 +647,21 @@
         \caption{График ПХ при $R_0$ = 0.1 Ом, запас устойчивости по фазе равен 10 градусов.}
     \end{figure}
 
-    \begin{figure}[h!]
-        \begin{center}
-            \includegraphics[scale=0.5]{31.png}
-        \end{center}
-        \vspace{-0.7cm}
-        \caption{График ПХ при $R_0$ = 240 Ом, запас устойчивости по фазе 78 градусов.}
-    \end{figure}
+    \begin{center}
+        \includegraphics[scale=0.5]{31.png}
+    \end{center}
+    \vspace{-0.7cm}
+    Рис.28: График ПХ при $R_0$ = 240 Ом, запас устойчивости по фазе 78 градусов.
+
+   \textbf{Вывод по заданию:}
+   \begin{itemize}
+       \item По полученным ПХ, можно сделать вывод о том, что перед нами дифференциатор. Изменение запаса по фазе влияет на его ПХ, а именно при $R_0$=0.1 Ом (усилитель практически самовозбужден) наблюдается потеря устойчивости и искажение выходного сигнала, а при $R_0$=240 Ом его выходная характеристика практически точно отображает дифференцированное значение сигнала.
+   \end{itemize}
 
     \textbf{Вывод:} во время выполнения лабораторной работы были изучены 
     схемотехнические особенности построения интегральных ОУ, принцип 
     построения макромодели в частотной области и исследованы влияние 
     внешних цепей ОС на характеристики устройств с ОУ. 
-
-
+    
 
 \end{document}
