@@ -15,6 +15,33 @@
 \setotherlanguages{english,russian}
 \usepackage{setspace}
 \usepackage[many]{tcolorbox}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
 
 \begin{document}
     \begin{center}
@@ -40,7 +67,7 @@
         \vspace{10ex}
 
         \textbf{Лабораторная работа №1}\\
-        ИЗУЧЕНИЕ И ПРАКТИЧЕСКОЕ ПРИМЕНЕНИЕ ПРОСТЕЙШИХ МЕТОДОВ ШИФРОВАНИЯ ДАННЫХ В РУЧНОМ РЕЖИМЕ
+        
 
 
     \end{center}
@@ -50,7 +77,7 @@
     \begin{flushleft}
         Выполнили студенты группы ИКТЗ-83:
 
-        \underline{Громов А.А. Миколаени М.С.} \hfill \rule[-0.85ex]{0.1\textwidth}{0.6pt}
+        \underline{Громов А.А., Миколаени М.С., Мазеин Д.С.} \hfill \rule[-0.85ex]{0.1\textwidth}{0.6pt}
 
         \footnotesize \textit{ (Ф.И.О., № группы) \hfill (подпись)} \normalsize
 
@@ -73,34 +100,102 @@
     \newpage
 
     \textbf{Цель лабораторной работы:}
-    Приобретение первичных практических навыков “ручного” шифрования на примере простейших алгоритмов преобразования данных.
-
-    \begin{enumerate}
-        \item \textbf{Режим шифрования методом простой замены.}
-        \begin{center}
-            \includegraphics[scale=0.9]{pics/change.png}
-        \end{center}
-        \item \textbf{Режим шифрования методом перестановок.}
-        \begin{center}
-            \includegraphics[scale=0.9]{pics/reorder.png}
-        \end{center}
-        \newpage
-        \item \textbf{Режим шифрования методом гаммирования.}
-        \begin{center}
-            \includegraphics[scale=0.9]{pics/gamm1.png}
-            \includegraphics[scale=0.9]{pics/gamm2.png}
-        \end{center}
-    \end{enumerate}
     
 
-    \textbf{Выводы}
     \begin{enumerate}
-        \item Шифрование методом замены является самым простым способом шифрования,
-        но из-за своей простоты имеет наименьшую вычислительную стойкость.
-        \item У шифрования методом перестановок вычислительная стойкость выше по сравнению
-        с шифрованием методом замены. Это связано с тем, что мы не знаем длину ключа, а также
-        порядок символов в нем.
-        \item Шифрование методом гаммирования является самым вычислительно стойким методом из
-        предложенных в лабораторной работе. Такая стойкость обеспечивается наибольшей длинной ключа.
+        \item \textbf{Имя коммутатора}
+        \begin{lstlisting}[language=bash]
+Switch1(config)#hostname S1
+        \end{lstlisting}
+        \item \textbf{Пароли (console, vty, enable)}
+        \begin{lstlisting}
+S1(config)#enable secret cisco
+S1(config)#line console 0 
+S1(config-line)#password cisco
+S1(config-line)#login
+S1(config-line)#exit
+S1(config-line)#line vty 0 15
+S1(config-line)#password cisco
+S1(config-line)#login
+S1(config-line)#exit
+        \end{lstlisting}
+        \item \textbf{Шифрование паролей}
+        \begin{lstlisting}
+S1(config)#service password-enctyption 
+        \end{lstlisting}
+        \item \textbf{Баннер}
+        \begin{lstlisting}
+S1(config)#banner motd @ Hello, please, enter password @
+        \end{lstlisting}
+        \item \textbf{ip-адрес}
+        \begin{lstlisting}
+S1(config)#interface vlan 1
+S1(config-if)#ip address 192.168.0.3 255.255.255.0
+S1(config-if)#no shutdown
+S1(config-if)#exit
+        \end{lstlisting}
+        \newpage
+        \item \textbf{Настройка ssh}
+        \begin{lstlisting}
+S1(config)#username user password 1234
+S1(config)#ip domain-name domain.local
+S1(config)#crypto key generate rsa 
+S1(config)#line vty 0 15
+S1(config-line)#transport input ssh
+S1(config-line)#exec-timeout 60 
+S1(config-line)#login local
+S1(config-line)#exit
+        \end{lstlisting}
+        \item \textbf{show running-config}
+        \begin{lstlisting}
+S1#sh run
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname S1
+!
+enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+!
+ip ssh version 1
+ip domain-name domain.local
+!
+username user privilege 1 password 7 08701E1D5D
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+.
+.
+.
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ ip address 192.168.0.2 255.255.255.0
+!
+banner motd ^Center password^C
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line vty 0 4
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 5 15
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+!
+end 
+        \end{lstlisting}
     \end{enumerate}
+
 \end{document}
