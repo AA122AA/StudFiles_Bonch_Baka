@@ -1,0 +1,136 @@
+\documentclass[a4paper,14pt]{extarticle} 
+\usepackage[a4paper,top=1.5cm, bottom=1.5cm, left=2cm, right=1cm]{geometry}
+%\usepackage[T2A]{fontenc}
+%\usepackage[english, russian]{babel}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{FreeSans}
+\setmonofont{FreeMono}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguages{english,russian}
+\usepackage{setspace}
+\usepackage[many]{tcolorbox}
+\usepackage{tikz} 
+\usetikzlibrary{positioning}
+
+\begin{document}
+    \begin{center}
+        \thispagestyle{empty}
+        \begin{singlespace}
+        ФЕДЕРАЛЬНОЕ АГЕНТСТВО СВЯЗИ
+
+        ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ
+
+        УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ
+
+        «САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ ТЕЛЕКОММУНИКАЦИЙ ИМ. ПРОФ. М.А. БОНЧ-БРУЕВИЧА»
+
+        (СПбГУТ)
+        \end{singlespace}
+        \vspace{-1ex}
+        \rule{\textwidth}{0.4pt}
+        \vspace{-5ex}
+
+        Факультет \underline{Инфокоммуникационных сетей и систем}
+
+        Кафедра \underline{Защищенных систем связи}
+        \vspace{10ex}
+
+        \textbf{Лабораторная работа №3}\\
+        Анализ системы шифрования по ее графовой модели
+
+
+    \end{center}
+    \vspace{4ex}
+    \begin{flushright}
+    \parbox{10 cm}{
+    \begin{flushleft}
+        Выполнил студент группы ИКТЗ-83:
+
+        \underline{Громов А.А. Вариант: 4} \hfill \rule[-0.85ex]{0.1\textwidth}{0.6pt}
+
+        \footnotesize \textit{ (Ф.И.О., № группы) \hfill (подпись)} \normalsize
+
+        Проверил:
+
+        \underline{Яковлев В.А.} \hfill \rule[-0.85ex]{0.1\textwidth}{0.6pt}
+
+        (\footnotesize \textit{уч. степень, уч. звание, Ф.И.О.) \hfill (подпись)} \normalsize
+
+    \end{flushleft}
+    }
+    \end{flushright}
+    \begin{center}
+        \vfill
+        Санкт-Петербург
+
+        2021
+
+    \end{center}
+    \newpage
+
+    \textbf{Цель лабораторной работы:}
+    Научиться оценивать стойкость системы шифрования по графовой модели.
+
+    \begin{minipage}{.45\linewidth}
+    \begin{tikzpicture}[node distance={2cm}, main/.style = {draw, circle, fill=black}] 
+        \node[main] (1) {}; 
+        \node[main] (2) [below of=1] {}; 
+        \node[main] (3) [below of=2] {}; 
+        \node[main] (4) [right of=1, xshift=2cm] {}; 
+        \node[main] (5) [right of=2, xshift=2cm] {}; 
+        \node[main] (6) [right of=3, xshift=2cm] {}; 
+        \draw[draw=green, very thick] (1) -- (4);
+        \draw[draw=red, very thick] (1) -- (5);
+        \draw[draw=blue, very thick] (1) -- (6);
+        \draw[draw=blue, very thick] (2) -- (4);
+        \draw[draw=green, very thick] (2) -- (5);
+        \draw[draw=red, very thick] (2) -- (6);
+        \draw[draw=red, very thick] (3) -- (4);
+        \draw[draw=blue, very thick] (3) -- (5);
+        \draw[draw=green, very thick] (3) -- (6);
+    \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}{.45\linewidth}
+    \underline{Расчет сумм вероятностей ключей:}\\
+    \noindent$P(E_1|M_1)=\sum_s P(K)_s = \frac{1}{3}$\\
+    $P(E_1|M_2)=\sum_s P(K)_s = \frac{1}{3}$\\
+    $P(E_1|M_3)=\sum_s P(K)_s = \frac{1}{3}$\\
+    $P(E_2|M_1)=\sum_s P(K)_s = \frac{1}{3}$\\
+    $P(E_2|M_2)=\sum_s P(K)_s = \frac{1}{3}$\\
+    $P(E_2|M_3)=\sum_s P(K)_s = \frac{1}{3}$\\
+    $P(E_3|M_1)=\sum_s P(K)_s = \frac{1}{3}$\\
+    $P(E_3|M_2)=\sum_s P(K)_s = \frac{1}{3}$\\
+    $P(E_3|M_3)=\sum_s P(K)_s = \frac{1}{3}$\\
+    \end{minipage}\\
+    \underline{Расчет вероятностей криптограмм:}\\
+    \noindent$P(E_1)=\sum\limits_{i=1}^{m^n} P(M_1)P(E_1|M_1) = 0.4\cdot\frac{1}{3}$\\
+    $P(E_1)=\sum\limits_{i=1}^{m^n} P(M_2)P(E_1|M_2) = 0.5\cdot\frac{1}{3}$\\
+    $P(E_1)=\sum\limits_{i=1}^{m^n} P(M_3)P(E_1|M_3) = 0.1\cdot\frac{1}{3}$\\
+    $P(E_2)=\sum\limits_{i=1}^{m^n} P(M_1)P(E_2|M_1) = 0.4\cdot\frac{1}{3}$\\
+    $P(E_2)=\sum\limits_{i=1}^{m^n} P(M_2)P(E_2|M_2) = 0.5\cdot\frac{1}{3}$\\
+    $P(E_2)=\sum\limits_{i=1}^{m^n} P(M_3)P(E_2|M_3) = 0.1\cdot\frac{1}{3}$\\
+    $P(E_3)=\sum\limits_{i=1}^{m^n} P(M_1)P(E_3|M_1) = 0.4\cdot\frac{1}{3}$\\
+    $P(E_3)=\sum\limits_{i=1}^{m^n} P(M_2)P(E_3|M_2) = 0.5\cdot\frac{1}{3}$\\
+    $P(E_3)=\sum\limits_{i=1}^{m^n} P(M_3)P(E_3|M_3) = 0.1\cdot\frac{1}{3}$\\
+    \noindent$P(E_1)=P(M_1)P(E_1|M_1)+P(M_2)P(E_1|M_2)+P(M_3)P(E_1|M_3)=0.4\cdot\frac{1}{3}+0.5\cdot\frac{1}{3}+0.1\cdot\frac{1}{3}=\frac{1}{3}$\\
+    $P(E_2)=P(M_1)P(E_2|M_1)+P(M_2)P(E_2|M_2)+P(M_3)P(E_2|M_3)=0.4\cdot\frac{1}{3}+0.5\cdot\frac{1}{3}+0.1\cdot\frac{1}{3}=\frac{1}{3}$\\
+    $P(E_3)=P(M_1)P(E_3|M_1)+P(M_2)P(E_3|M_2)+P(M_3)P(E_3|M_3)=0.4\cdot\frac{1}{3}+0.5\cdot\frac{1}{3}+0.1\cdot\frac{1}{3}=\frac{1}{3}$\\
+    \underline{Расчет апостериорных вероятностей всех сообщений:}\\
+    \noindent$P(M_1|E_1)=\frac{P(E_1|M_1)P(M_1)}{P(E_1)}=\frac{\frac{1}{3}\cdot0.4}{\frac{1}{3}}=0.4$\\
+    $P(M_1|E_2)=\frac{P(E_2|M_1)P(M_1)}{P(E_2)}=\frac{\frac{1}{3}\cdot0.4}{\frac{1}{3}}=0.4$\\
+    $P(M_1|E_3)=\frac{P(E_3|M_1)P(M_1)}{P(E_3)}=\frac{\frac{1}{3}\cdot0.4}{\frac{1}{3}}=0.4$\\
+    $P(M_2|E_1)=\frac{P(E_1|M_2)P(M_2)}{P(E_1)}=\frac{\frac{1}{3}\cdot0.5}{\frac{1}{3}}=0.5$\\
+    $P(M_2|E_2)=\frac{P(E_2|M_2)P(M_2)}{P(E_2)}=\frac{\frac{1}{3}\cdot0.5}{\frac{1}{3}}=0.5$\\
+    $P(M_2|E_3)=\frac{P(E_3|M_2)P(M_2)}{P(E_3)}=\frac{\frac{1}{3}\cdot0.5}{\frac{1}{3}}=0.5$\\
+    $P(M_3|E_1)=\frac{P(E_1|M_3)P(M_3)}{P(E_1)}=\frac{\frac{1}{3}\cdot0.1}{\frac{1}{3}}=0.1$\\
+    $P(M_3|E_2)=\frac{P(E_2|M_3)P(M_3)}{P(E_2)}=\frac{\frac{1}{3}\cdot0.1}{\frac{1}{3}}=0.1$\\
+    $P(M_3|E_3)=\frac{P(E_3|M_3)P(M_3)}{P(E_3)}=\frac{\frac{1}{3}\cdot0.1}{\frac{1}{3}}=0.1$\\
+    \textbf{Выводы}
+    Данная система шифрования не является абсолютно стойкой, так как условие $P(M|E)=P(M)$ не выполняется.
+\end{document}
