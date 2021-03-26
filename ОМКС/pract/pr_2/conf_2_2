@@ -1,0 +1,64 @@
+S2
+en
+conf t
+int vlan 10 
+ip address 172.16.0.4 255.255.255.0
+no sh
+exit 
+int vlan 20 
+ip address 172.17.0.4 255.255.255.0
+no sh
+exit 
+int vlan 30 
+ip address 172.18.0.4 255.255.255.0
+no sh
+exit 
+int f0/1
+sw mode access
+sw access vlan 10 
+no sh
+exit 
+int f0/2
+sw mode access
+sw access vlan 20 
+no sh
+exit 
+int f0/3
+sw mode access
+sw access vlan 30 
+no sh
+exit 
+
+S3
+en
+conf t
+int vlan 10 
+ip address 172.16.0.5 255.255.255.0
+no sh
+exit 
+int vlan 20 
+ip address 172.17.0.5 255.255.255.0
+no sh
+exit 
+int vlan 30 
+ip address 172.18.0.5 255.255.255.0
+no sh
+exit 
+int f0/1
+sw mode access
+sw access vlan 10 
+no sh
+exit 
+int f0/2
+sw mode access
+sw access vlan 20 
+no sh
+exit 
+int f0/3
+sw mode access
+sw access vlan 30 
+no sh
+exit 
+
+
+
