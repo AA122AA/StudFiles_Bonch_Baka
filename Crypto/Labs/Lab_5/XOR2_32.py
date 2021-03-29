@@ -4,15 +4,15 @@ def Convert(string):
         return list1
 def main():
     x = [0 for _ in range(32)]
-    N1 = Convert(input())
-    K0 = Convert(input())
+    N1 = Convert(input("N1: "))
+    K0 = Convert(input("Kx: "))
     for i in range(len(N1)):
         N1[i] = int(N1[i])
         K0[i] = int(K0[i])
     print(N1)
     print(K0)
     ad = 0
-    for i in range(31,0,-1):
+    for i in range(31,-1,-1):
         if N1[i]==K0[i]==1 and ad==1:
            x[i]=1 
            ad=1
