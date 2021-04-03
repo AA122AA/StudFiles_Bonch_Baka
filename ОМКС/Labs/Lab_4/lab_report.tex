@@ -98,11 +98,13 @@
         2021
 
     \end{center}
-
-    
+    \newpage
 
     \begin{center}
-        \includegraphics[scale=0.35]{pics/0.jpeg}
+        \textbf{Установка обновления Cisco IOS}
+    \end{center}
+    \begin{center}
+        \includegraphics[scale=0.34]{pics/0.jpeg}
     \end{center}
     \begin{lstlisting}
 copy tftp flash
@@ -110,6 +112,21 @@ copy tftp flash
 c1900-universalk9-mz.SPA.155-3.M4a.bin
     \end{lstlisting}
     \begin{center}
-        \includegraphics[scale=0.35]{pics/1.jpeg}
+        \includegraphics[scale=0.34]{pics/1.jpeg}
     \end{center}
+    \begin{center}
+        \textbf{Сброс пароля консольной линии}
+    \end{center}
+    При загрузке нажать control+C, затем:
+    \begin{lstlisting}
+confreg 0x2142.
+    \end{lstlisting} 
+    Система загрузится со стандартной конфигурацией. Далее, для того, чтобы восстановить предыдущую конфигурацию, нужно ввести команду:
+    \begin{lstlisting}
+copy startup-config running-config. 
+    \end{lstlisting}    
+    Теперь можно заменить забытый пароль, и сохранить новый пароль командой 
+    \begin{lstlisting}
+        copy running-config startup-config.
+    \end{lstlisting}
 \end{document}
