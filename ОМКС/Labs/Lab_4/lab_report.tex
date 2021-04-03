@@ -107,9 +107,12 @@
         \includegraphics[scale=0.34]{pics/0.jpeg}
     \end{center}
     \begin{lstlisting}
-copy tftp flash
+R1#copy tftp flash
 10.0.0.2
 c1900-universalk9-mz.SPA.155-3.M4a.bin
+R1(conf)#boot system flash:c1900-universalk9-mz.SPA.155-3.M4a.bin
+R1(conf)#exit
+R1#reload
     \end{lstlisting}
     \begin{center}
         \includegraphics[scale=0.34]{pics/1.jpeg}
