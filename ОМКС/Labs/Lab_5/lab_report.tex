@@ -104,12 +104,12 @@
     
 
     \begin{enumerate}
-        \item \textbf{Настройка маршрутизатора ISP1}
+        \item \textbf{Настройка маршрутизатора Edge\_router}
         \begin{lstlisting}
 Edge_router(config)# ip route 10.10.10.0 255.255.255.252 s0/0/0
 Edge_router(config)# ip route 10.10.10.4 255.255.255.252 s0/0/1 5
-Edge_router(config)# ip route 2001:DB8:A:1::/64 s0/0/0
-Edge_router(config)# ip route 2001:DB8:A:2::/64 s0/0/1 5
+Edge_router(config)# ipv6 route 2001:DB8:A:1::/64 s0/0/0
+Edge_router(config)# ipv6 route 2001:DB8:A:2::/64 s0/0/1 5
         \end{lstlisting}
         \item \textbf{Настройка маршрутизатора ISP1}
         \begin{lstlisting}
