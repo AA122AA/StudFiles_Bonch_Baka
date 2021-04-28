@@ -14,6 +14,14 @@ sudo iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
 sudo iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
 sudo iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
 
+PART 2
+
+sudo apt install logcheck 
+
+vim /etc/logcheck/logcheck.conf
+
+cat /etc/log/syslog
+
 
 PART 3
 
