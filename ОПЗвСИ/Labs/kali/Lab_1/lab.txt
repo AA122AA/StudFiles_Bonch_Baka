@@ -72,7 +72,10 @@ cd wifijammer
 sudo python wifijammer.py --help
 sudo python wifijammer --help
 
-sudo apt-get install python-scapy
+sudo apt-get install python-scapy -  here is a problem(does not find package)
+go to https://github.com/secdev/scapy/releases and download 2.4.3
+tar -xvzf scapy-2.4.3
+sudo python2 setup.py install
 
 sudo python wifijammer --help
 
@@ -88,6 +91,7 @@ PART 9
 crunch 1 9 0123456789abcdefg
 
 crunch 9 9 0123 -o passwords.txt
+
 
 
 
