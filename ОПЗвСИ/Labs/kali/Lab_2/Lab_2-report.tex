@@ -106,82 +106,104 @@
     \textbf{Часть 1 - Honeypot, Nmap}
     \begin{center}
 
+        \singlespacing
         \includegraphics[scale=0.6]{pics/0.png}
 
-        Рис. 1
+        Рис. 1 Настройка сетевого адаптера для виртуальной машины.
+        \vspace{1ex}
 
-        \includegraphics[scale=0.6]{pics/1.png}
+        \includegraphics[scale=0.55]{pics/1.png}
 
-        Рис. 2
+        Рис. 2 Определение ip адреса сервера.
+        \vspace{1ex}
 
         \includegraphics[scale=0.5]{pics/2.png}
 
-        Рис. 3
+        Рис. 3 Сканируем сеть для нахождения хостов и открытых порты на них.
+        \vspace{1ex}
 
         \includegraphics[scale=0.5]{pics/3.png}
 
-        Рис. 4
+        Рис. 4 Сканируем сеть для нахождения хостов без портов.
+        \vspace{1ex}
 
-        \includegraphics[scale=0.5]{pics/4.png}
+        \includegraphics[scale=0.48]{pics/4.png}
 
-        Рис. 5
+        Рис. 5 Проверяем наличие отклика от сервера.
+        \vspace{1ex}
 
-        \includegraphics[scale=0.5]{pics/5.png}
+        \includegraphics[scale=0.48]{pics/5.png}
 
-        Рис. 6
+        Рис. 6 Сканируем ip-адрес на наличие открытых портов с помощью TCP connect scan.
+        \vspace{1ex}
 
-        \includegraphics[scale=0.5]{pics/6.png}
+        \includegraphics[scale=0.48]{pics/6.png}
 
-        Рис. 7
+        Рис. 7 Сканируем ip-адрес на наличие открытых портов с помощью FIN scan.
+        \vspace{1ex}
 
-        \includegraphics[scale=0.5]{pics/7.png}
+        \includegraphics[scale=0.48]{pics/7.png}
 
-        Рис. 8
+        Рис. 8 Сканируем ip-адрес на наличие открытых портов с помощью Xmas scan.
+        \vspace{1ex}
 
-        \includegraphics[scale=0.5]{pics/8.png}
+        \includegraphics[scale=0.48]{pics/8.png}
 
-        Рис. 9
+        Рис. 9 Сканируем ip-адрес на наличие открытых портов с помощью Null scan.
+        \vspace{1ex}
 
         \includegraphics[scale=0.5]{pics/9.png}
 
-        Рис. 10
+        Рис. 10 Сканируем ip-адрес на наличие открытых портов с помощью IP protocol scan.
+        \vspace{1ex}
 
         \includegraphics[scale=0.5]{pics/10.png}
 
-        Рис. 11
+        Рис. 11 Сканируем ip-адрес на наличие открытых портов с помощью TCP ACT scan.
+        \vspace{1ex}
 
         \includegraphics[scale=0.5]{pics/11.png}
 
-        Рис. 12
+        Рис. 12 Сканируем ip-адрес на наличие открытых портов с помощью TCP Window scan.
+        \vspace{1ex}
 
         \includegraphics[scale=0.5]{pics/12.png}
 
-        Рис. 13
+        Рис. 13 Сканируем ip-адрес на наличие открытых портов с помощью Version detection.
+        \vspace{1ex}
 
         \includegraphics[scale=0.5]{pics/13.png}
         
-        Рис. 14
+        Рис. 14 Сканируем ip-адрес для определения операционной системы. 
+        \vspace{1ex}
     \end{center}
 
-    \newpage
     \textbf{Часть 2 - WEB APLICATION FIREWALL}
     \begin{center}
 
+        \singlespacing
         \includegraphics[scale=0.42]{pics/14.png}
 
-        Рис. 15
+        Рис. 15 Неудачное сканирование ip-адреса на наличие открытых портов с помощью Xmas scan, так как на сервере настроен iptables.
+        \vspace{1ex}
 
         \includegraphics[scale=0.5]{pics/15.png}
 
-        Рис. 16
+        Рис. 16 Проверяем новый лог-файл.
+        \vspace{1ex}
 
         \includegraphics[scale=0.5]{pics/16.png}
 
-        Рис. 17
+        Рис. 17 Переименовываем конфигурационный файл apache2-mod-security2.
+        \vspace{1ex}
 
         \includegraphics[scale=0.6]{pics/17.png}
 
-        Рис. 18
+        Рис. 18 Редактируем конфигурацию apache2-mod-security2 под наши нужды.
     \end{center}
+
+    \textbf{Вывод}
+
+    В данной лабораторной работе мы научились сканировать ip-адреса на наличие открытых портов различными методами. Также произвели протестировали сервер на уязвимости, после настройки iptables(файервола) на нем. 
 \end{document}
 
