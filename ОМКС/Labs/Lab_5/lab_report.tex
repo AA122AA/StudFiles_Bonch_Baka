@@ -106,9 +106,14 @@
     \begin{enumerate}
         \item \textbf{Настройка маршрутизатора Edge\_router}
         \begin{lstlisting}
-Переделать, внимательно пррочитать.
-маршруты по0молчанию - жто 0.0.0.0 .0.0.0.0 
-и прописать прямой маршрут к серверу
+Edge_router(config)#ip route 0.0.0.0 0.0.0.0 10.10.10.1
+Edge_router(config)#ip route 0.0.0.0 0.0.0.0 10.10.10.5 5
+Edge_router(config)#ipv6 route ::/0 2001:db8:a:1::1
+Edge_router(config)#ipv6 route ::/0 2001:db8:a:2::1 5
+Edge_router(config)#ip route 198.0.0.10 255.255.255.255 serial0/0/0
+Edge_router(config)#ip route 198.0.0.10 255.255.255.255 serial0/0/1 5
+Edge_router(config)#ipv6 route 2001:db8:f:f::10/128 2001:db8:a:1::1
+Edge_router(config)#ipv6 route 2001:db8:f:f::10/128 2001:db8:a:2::1 5
         \end{lstlisting}
         \item \textbf{Настройка маршрутизатора ISP1}
         \begin{lstlisting}
