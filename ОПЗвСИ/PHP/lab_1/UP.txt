@@ -1,0 +1,12 @@
+ад:userbd
+table:loging
+1st:id
+2st:username
+3st:password
+UP_check
+select username from login where usernameparam=username
+up_create
+INSERT INTO login (username,password)
+VALUES (usernameparam,userpassparam)
+up_login
+select * from login where userpassparam=password AND usernameparam=username
