@@ -3,7 +3,7 @@
 %\usepackage[T2A]{fontenc}
 %\usepackage[english, russian]{babel}
 \usepackage{graphicx}
-\DeclareGraphicsExtensions{.pdf,.png,.png}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
 \setsansfont{FreeSans}
@@ -48,7 +48,7 @@
     \begin{center}
         \thispagestyle{empty}
         \begin{singlespace}
-        МИНИСТЕРСТВО ЦИФРОВОГО РАЗВИТИЯ, СВЯЗИ И МАССОВЫХ КОММУНИКАЦИЙ РОССИЙСКОЙ ФЕДЕРАЦИИ
+        ФЕДЕРАЛЬНОЕ АГЕНТСТВО СВЯЗИ
 
         ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ
 
@@ -68,6 +68,7 @@
         \vspace{10ex}
 
         \textbf{Лабораторная работа №1}\\
+        Персональный межсетевой экран
         
 
 
@@ -103,243 +104,101 @@
     \newpage
 
 
-    \textbf{Часть 1 - Настройка фильтрации пакетов (фаервол)}
+    \textbf{Пункт 1}
+    \vspace{-3ex}
     \begin{center}
+        \singlespacing
+        Установка и запуск XAMPP.
 
-        \includegraphics[scale=0.5]{pics/1.png}
+        \includegraphics[scale=0.4]{pics/1.jpg}
 
-        Рис. 1 Выводим список правил iptables.
+       Рис. 1 Панель XAMPP.
+    \end{center}
+
+    \textbf{Пункт 2}
+    \vspace{-3ex}
+    \begin{center}
+        \singlespacing
+        Проверка работоспособности страницы регистрации, авторизации и профиля.
+
+        \includegraphics[scale=0.25]{pics/3.jpg}
+
+        Рис. 2 Страница регистрации.
+
+        \includegraphics[scale=0.25]{pics/2.jpg}
+
+        Рис. 3 Страница авторизации.
         \vspace{1ex}
 
-        \includegraphics[scale=0.5]{pics/2.png}
+        \includegraphics[scale=0.25]{pics/4.jpg}
 
-        Рис. 2 Выводим список правил iptables подробнее.
-        \vspace{1ex}
+        Рис. 4 Страница профиля.
 
-        \includegraphics[scale=0.5]{pics/3.png}
-
-        Рис. 3 Выводим список команд необходимых для активации правил и политик.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.5]{pics/4.png}
-
-        Рис. 4 Разрешаем трафик на 80 и 22 порты для tcp протокола.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.5]{pics/5.png}
-
-        Рис. 5 Удаляем разрешение для порта 22.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.5]{pics/6.png}
-
-        Рис. 6 Правило, позволяющее устанавливать исходящее соединение.  
-        \vspace{1ex}
-
-        \includegraphics[scale=0.5]{pics/7.png}
-        
-        Рис. 7 Запрещаем все входящие и разрешаем все исходящие.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.5]{pics/8.png}
-
-        Рис. 8  Правила для блокировки наиболее распространенных атак.
-        \vspace{1ex}
     \end{center}
 
     \newpage
-    \textbf{Часть 2 - Мониторинг журналов с использованием logcheck}
+    \textbf{Пункт 3}
+    \vspace{-3ex}
     \begin{center}
+        \singlespacing
+        Производим SQL-инъекцию(в пароле вводим 'OR1='1).
 
-        \includegraphics[scale=0.5]{pics/9.png}
+        \includegraphics[scale=0.25]{pics/5.jpg}
 
-        Рис. 9 logcheck успешно установлен. 
+        Рис. 5 Ввели в поле пароль - 'OR1='1. 
         \vspace{1ex}
-
-        \includegraphics[scale=0.5]{pics/10.png}
-
-        Рис. 10 Изменили REPORTLEVEL с server на paranoid.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.5]{pics/11.png}
-
-        Рис. 11  Логи из файла /var/log/syslog.
-        \vspace{1ex}
-
-   \end{center}
-
-   \textbf{Часть 3 - Установка и настройка netfilter}
-   \begin{center}
-       
-        \includegraphics[scale=0.45]{pics/12.png}
-
-        Рис. 12 Помечаем каждый пакет с помощью модуля conntrack.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.45]{pics/13.png}
-
-        Рис. 13 Сопоставляем метки с состоянием битов.
-        \vspace{1ex}
-
-   \end{center}
-
-   \textbf{Часть 4 - Осуществить защиту файловой системы.}
-   \begin{center}
-       
-        \includegraphics[scale=0.45]{pics/14.png}
-
-        \begin{singlespace}
-            Рис. 14 Подменяем внутренный ip на внешний для всех пакетов, а также разрешаем
-        \vspace{1ex}
-            перенаправлять пакеты между внутренними интерфейсами.
-        \end{singlespace}
-
-        \includegraphics[scale=0.45]{pics/15.png}
-
-        Рис. 15 Устанавливаем пакет iptables-persistent.
-        \vspace{1ex}
-
-   \end{center}
-
-   \textbf{Часть 6 - Установка LOIC на Kali Linux.}
-   \begin{center}
-        \includegraphics[scale=0.45]{pics/16.png}
-
-        Рис. 16 Скачиваем git-core.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.45]{pics/17.png}
-
-        Рис. 17 Устанавливаем git-core с помощью утилиты dpkg.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.45]{pics/18.png}
-
-        Рис. 18 Проверям установился ли пакет git-core.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.45]{pics/19.png}
-
-        Рис. 19 Команда для установки MonoDevelop.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.45]{pics/20.png}
-
-        Рис. 20 Команда для установки MonoDevelop.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.4]{pics/21.png}
-
-        Рис. 21 Команда для установки MonoDevelop.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.26]{pics/22.png}
-
-        Рис. 22 Интерфейс программы MonoDevelop.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.42]{pics/23.png}
-
-        Рис. 23 Создаем папку и скачиваем скрипт для установки loic.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.4]{pics/24.png}
-
-        Рис. 24 Делаем скрипт исполняемым файлом.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.4]{pics/25.png}
-
-        Рис. 25 Правим скрипт.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.4]{pics/26.png}
-
-        Рис. 26 Запускаем установку loic.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.4]{pics/27.png}
-
-        Рис. 27 Обновляем.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.35]{pics/28.png}
-
-        Рис. 28 Программа loic установленна, и запущена. 
-        \vspace{1ex}
-
-    \end{center}
-    
-    \textbf{Часть 7 - Установка Wifi\_Jammer на Kali Linux.}
-    \begin{center}
         
-        \includegraphics[scale=0.4]{pics/29.png}
+        \includegraphics[scale=0.25]{pics/6.jpg}
 
-        Рис. 29 Клонируем из репозитория на github wifijammer.git.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.4]{pics/30.png}
-
-        Рис. 30 Убеждаемся, что у нас не установелна библиотека scapy, для python 2.
-        \vspace{1ex}
-
-        \includegraphics[scale=0.4]{pics/31.png}
-
-        Рис. 31 wifijammer работает, после установки недостающего пакета.
-        \vspace{1ex}
-
+        Рис. 6 Успешно авторизировались.
     \end{center}
 
-    \textbf{Часть 8 - Использование SQLMAP на Kali Linux: взлом веб-сайтов и
-баз данных через SQL-инъекции}
+    \newpage
+    \textbf{Пункт 4}
+    \vspace{-3ex}
     \begin{center}
-        \includegraphics[scale=0.4]{pics/32.png}
+        \singlespacing
+        Добавляем защиту от SQL-инъекции в файл login и register.
 
-        Рис. 32 Производим SQL-инъекцию со стандартным поведением.
+        \includegraphics[scale=0.4]{pics/7.jpg}
+
+        Рис. 7 Редактура файла register.php.
         \vspace{1ex}
 
-        \includegraphics[scale=0.4]{pics/33.png}
+        \includegraphics[scale=0.4]{pics/8.jpg}
 
-        \begin{singlespace}
-            Рис. 33 Производим SQL-инъекцию со стандартным поведением и случайным user-agent. 
-        \vspace{1ex}
-        \end{singlespace}
-
+        Рис. 8 Редактура файла login.php.
     \end{center}
 
-    \textbf{Часть 9 - Crunch — генератор паролей. Установка и тест.}
+    \newpage
+    \textbf{Пункт 5}
+    \vspace{-3ex}
     \begin{center}
+        \singlespacing
+        Проверка защиты от SQL-инъекции.
 
-        \includegraphics[scale=0.4]{pics/34.png}
+        \includegraphics[scale=0.25]{pics/9.jpg}
 
-        Рис. 34 Генерируем пароли от 1 до 9 цифр с использованием 0123456789abcdefg.
+        Рис. 9 При попытке зайти с помощью SQL-инъекции, авторизации не удалась. 
         \vspace{1ex}
 
-        \includegraphics[scale=0.4]{pics/35.png}
+        \includegraphics[scale=0.25]{pics/10.jpg}
 
-        Рис. 35 Пример паролей.
-        \vspace{1ex}
+        Рис. 10 При вводе валидного пароля, успешно происходит авторизация.
 
-        \includegraphics[scale=0.4]{pics/36.png}
+        \includegraphics[scale=0.25]{pics/11.jpg}
 
-        \begin{singlespace}
-            Рис. 36 Генерируем пароли из 9 цифр с использованием 0123 и сохраняем их в файл passwords.txt.
-        \vspace{1ex}
-        \end{singlespace}
+        Рис. 11 Страница профиля, после успешной авторизации.
+    \end{center}
 
-        \includegraphics[scale=0.33]{pics/37.png}
+    \textbf{Вывод:}
 
-        Рис. 37 Проверяем файл passwords.txt.
-        \vspace{1ex}
+    В ходе данной лабораторной работы мы научились разворачивать web-сервер
+    на Windows машине с помощью XAMPP. В XAMPP используется следующий стек 
+    технологий: Apache, MariaDB, PHP, Perl. Он распространяется бесплатно, а также
+    позволяет быстро создать web-сервер Apache, а так автоматически подключить к 
+    нему MariaDB, PHP, Perl.
 
-   \end{center}
-
-   \textbf{Вывод}
-
-   В ходе данной лабораторной работы мы научились настраивать стандартный
-   файервол linux - iptables. Также установили мониторинг журналов logcheck и \linebreak
-   произвели его настройку. Установили программы MonoDevelop, Loic и wifijammer. 
-   Сделали попытку совершить SQL-инъекцию на сайт zss.sut.ru, и изучили работу 
-   консольной программы crunch.
+    
 \end{document}
 
