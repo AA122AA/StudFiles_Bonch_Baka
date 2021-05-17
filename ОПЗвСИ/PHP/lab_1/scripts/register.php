@@ -15,6 +15,7 @@ $connection = mysqli_connect("localhost", "noob", "noob");
 // To protect mysqli injection for Security purpose
 $username = stripslashes($username);
 $password = stripslashes($password);
+// ниже 2 строчки - защита от инъекци 
 $username = mysqli_real_escape_string($connection, $username);
 $password = mysqli_real_escape_string($connection, $password);
 // Selecting Database
