@@ -1,0 +1,26 @@
+en
+conf t
+vlan 10 
+name Faculty/Staff
+vlan 20 
+name Students
+vlan 30 
+name Guest(Default)
+vlan 99 
+name Management&Native
+vlan 150 
+name VOICE
+exit
+exit
+sh vl br
+
+conf t
+int f0/11
+switchport mode access
+switchport access vlan 10
+int f0/18
+switchport mode access
+switchport access vlan 20
+int f0/6
+switchport mode access
+switchport access vlan 30
