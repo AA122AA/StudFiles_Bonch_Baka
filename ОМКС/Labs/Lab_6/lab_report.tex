@@ -103,7 +103,7 @@
 
     \begin{enumerate}
         \item lab 3.1.4
-        \begin{enumerate}
+        \begin{itemize}
             \item
                 \begin{center}
                     \includegraphics[scale=0.4]{pics/3.1.4_1.png} 
@@ -137,10 +137,10 @@
             \item \textbf{Что представляют собой широковещательные домены на коммутаторе применительно к портам?}\par
             Каждый vlan создает широковещательный домен. То есть в нашем случае их 3. Порты в одном vlan являются частью одного широковещательного домена.
 
-        \end{enumerate}
+        \end{itemize}
         \newpage
         \item lab 3.2.8
-        \begin{enumerate}
+        \begin{itemize}
             \item 
                 \begin{center}
                     \includegraphics[scale=0.4]{pics/3.2.8_1.png}
@@ -165,38 +165,115 @@
             \item \textbf{С помощью какой команды можно удалить файл сети VLAN на коммутаторах?}\par
             \emph{delete flash:/vlan.dat}
 
-        \end{enumerate}
+            \item \textbf{Если компьютер в сети VLAN 10 отправляет широковещательное сообщение, какие устройства его получат?}\par
+               Устройства находящиеся в vlan 10. 
+
+            \item \textbf{Если компьютер в сети VLAN 20 отправляет широковещательное сообщение, какие устройства его получат?}\par
+               Устройства находящиеся в vlan 20. 
+
+            \item \textbf{Если компьютер в сети VLAN 30 отправляет широковещательное сообщение, какие устройства его получат?}\par
+               Устройства находящиеся в vlan 30. 
+
+            \item \textbf{Что происходит с кадром, отправленным с компьютера сети VLAN 10 на компьютер сети VLAN 30?}\par
+                Кадр отбрасывается.
+
+            \item \textbf{Что представляют собой коллизионные домены на коммутаторе применительно к портам?}\par
+                Каждое соединение коммутатора с хостом образует коллизионный домен. То есть в нашем случае их 24.
+
+            \item \textbf{Что представляют собой широковещательные домены на коммутаторе применительно к портам?}\par
+                Каждый vlan создает широковещательный домен. То есть в нашем случае их 3. Порты в одном vlan являются частью одного широковещательного домена.
+
+        \end{itemize}
+        \newpage
         \item lab 3.3.12
-        \begin{enumerate}
-            \item 
-        \end{enumerate}
+        \begin{itemize}
+            \item \textbf{Какие преимущества могут предоставить сети VLAN?}
+                Они помогут ограничить широковещательный домен до машин из одной сети, так как без vlan широковещательные сообщения получают все пк.
+                \begin{center}
+                    \includegraphics[scale=0.5]{pics/3.3.12_2.png}
+                    
+                    Делаем широковещательный запрос.
+                    \includegraphics[scale=0.3]{pics/3.3.12_1.png}
+                \end{center}
+
+            \item Команды для настройки
+                \begin{lstlisting}
+en
+conf t
+vlan 10 
+name Faculty/Staff
+vlan 20 
+name Students
+vlan 30 
+name Guest(Default)
+vlan 99 
+name Management&Native
+vlan 150 
+name VOICE
+exit
+exit
+sh vl br
+                    
+conf t
+int f0/11
+switchport mode access
+switchport access vlan 10
+int f0/18
+switchport mode access
+switchport access vlan 20
+int f0/6
+switchport mode access
+switchport access vlan 30
+                \end{lstlisting}
+            \item vlan настроены
+                \begin{center}
+                    \includegraphics[scale=0.45]{pics/3.3.12_3.png}
+                \end{center}
+            \item \textbf{Успешно ли выполняются эхо-запросы при назначении портов доступа в соответствующие сети VLAN?}\par
+                Нет, эхо-запрос выполняется не успешно. 
+                \begin{center}
+                    \includegraphics[scale=0.45]{pics/3.3.12_4.png}
+                \end{center}
+
+            \item \textbf{Что можно сделать для разрешения этой проблемы?}\par
+                Для решения данной проблемы нужно настроить транки на гигабитных портах. А так же S1 коммутатор. 
+        \end{itemize}
         \item lab 3.4.5
-        \begin{enumerate}
-            \item 
-        \end{enumerate}
+        \begin{itemize}
+            \item Настройка trunk
+                \begin{lstlisting}
+switchport mode trunk
+                \end{lstlisting}
+            \item Настройка native vlan 
+                \begin{lstlisting}
+switchport trunk native vlan 99
+                \end{lstlisting}
+            \item \textbf{Почему при разных native VLAN на коммутаторах трафик все равно идет?}\par
+                Это связано с тем, что лю
+        \end{itemize}
         \item lab 3.5.5
-        \begin{enumerate}
+        \begin{itemize}
             \item 
-        \end{enumerate}
+        \end{itemize}
         \item lab 3.6.1
-        \begin{enumerate}
+        \begin{itemize}
             \item 
-        \end{enumerate}
+        \end{itemize}
         \item lab 4.2.7
-        \begin{enumerate}
+        \begin{itemize}
             \item 
-        \end{enumerate}
+        \end{itemize}
         \item lab 4.3.8
-        \begin{enumerate}
+        \begin{itemize}
             \item 
-        \end{enumerate}
+        \end{itemize}
         \item lab 4.4.8
-        \begin{enumerate}
+        \begin{itemize}
             \item 
-        \end{enumerate}
+        \end{itemize}
         \item lab 4.5.1
-        \begin{enumerate}
+        \begin{itemize}
             \item 
-        \end{enumerate}
+        \end{itemize}
     \end{enumerate}
 \end{document}
