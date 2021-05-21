@@ -157,13 +157,19 @@
             Так как PC7 находится в одном vlan с PC1.
 
             \item \textbf{Какая команда используется для удаления загрузочной конфигурации на коммутаторах?}\par
-            \emph{erase startup-config}
+            \begin{lstlisting}
+erase startup-config
+            \end{lstlisting}
 
             \item \textbf{Где на коммутаторах хранится файл сети VLAN?}\par
-            \emph{flash:/vlan.dat}
+            \begin{lstlisting}
+flash:/vlan.dat
+            \end{lstlisting}
 
             \item \textbf{С помощью какой команды можно удалить файл сети VLAN на коммутаторах?}\par
-            \emph{delete flash:/vlan.dat}
+            \begin{lstlisting}
+delete flash:/vlan.dat
+            \end{lstlisting}
 
             \item \textbf{Если компьютер в сети VLAN 10 отправляет широковещательное сообщение, какие устройства его получат?}\par
                Устройства находящиеся в vlan 10. 
@@ -184,7 +190,6 @@
                 Каждый vlan создает широковещательный домен. То есть в нашем случае их 3. Порты в одном vlan являются частью одного широковещательного домена.
 
         \end{itemize}
-        \newpage
         \item lab 3.3.12
         \begin{itemize}
             \item \textbf{Какие преимущества могут предоставить сети VLAN?}
@@ -227,7 +232,7 @@ switchport access vlan 30
                 \end{lstlisting}
             \item vlan настроены
                 \begin{center}
-                    \includegraphics[scale=0.45]{pics/3.3.12_3.png}
+                    \includegraphics[scale=0.4]{pics/3.3.12_3.png}
                 \end{center}
             \item \textbf{Успешно ли выполняются эхо-запросы при назначении портов доступа в соответствующие сети VLAN?}\par
                 Нет, эхо-запрос выполняется не успешно. 
@@ -249,12 +254,61 @@ switchport mode trunk
 switchport trunk native vlan 99
                 \end{lstlisting}
             \item \textbf{Почему при разных native VLAN на коммутаторах трафик все равно идет?}\par
-                Это связано с тем, что лю
-                не до делано !!1
+                Это связано с тем, что любой нетегированный трафик в любом случае будет пересылаться в native vlan.
+            \item \textbf{Каким активным сетям VLAN разрешено передавать данные по этому магистральному каналу?}\par
+                1, 10, 20, 30, 88, 99
+                
+            \item \textbf{Почему порт G0/1 на коммутаторе S2 больше не назначен сети VLAN 1?}\par
+                Так как данный порт переведён в режим Trunk.
+                
         \end{itemize}
         \item lab 3.5.5
         \begin{itemize}
-            \item 
+            \item Команды для настройки S2 и S3
+                \begin{lstlisting}
+en 
+conf t
+vlan 10 
+name Red
+vlan 20 
+name Blue
+vlan 30
+name Yellow
+exit
+int range f0/1-8
+switchport mode access
+switchport access vlan 10
+int range f0/9-16
+switchport mode access
+switchport access vlan 20
+int range f0/16-24
+switchport mode access
+switchport access vlan 30
+                \end{lstlisting}
+            \item \textbf{Какие сети VLAN настроены на этих коммутаторах(S2, S3)?}\par
+                Те же, что и на S1
+            \item \textbf{В дополнение к VLAN по умолчанию, какие VLAN настроены на S2?}\par
+                red, blue, yellow
+            \item \textbf{Успешно ли выполнен эхо-запрос? Дайте пояснение.}\par
+                Нет, эхо-запрос выполняется не успешно. Для решения данной проблемы нужно настроить транки на гигабитных портах. А так же S1 коммутатор.
+            \item \textbf{Что будет результатом согласования магистрали между S1 и S2?}\par
+                Поднимется транк между коммутаторами.
+            \item \textbf{Каков режим и состояние этого порта?}\par
+                Режим - auto, состояние - trunking.
+            \item \textbf{Убедиться, что dpt отключен на 1 из 2х портов.}\par
+                \begin{center}
+                    \includegraphics[scale=0.8]{pics/3.5.5_1.png}
+                \end{center}
+            \item \textbf{Какая сеть VLAN с нетегированным трафиком сейчас используется для этих магистралей?}\par
+                Vlan 1
+            \item \textbf{Какие сообщения вы получили на S1? Как бы вы исправили эту ошибку?}\par
+                Несогласован native vlan. Нужно поменять на S2 и S3 native vlan.
+            \item \textbf{Почему пинг не удался?}\par
+                На S3 trunk не работает.
+            \item \textbf{Какой режим и инкапсуляция на G0/2?}\par
+                Вывод команды sh int tr был пуст. 
+            \item \textbf{Что отображается состояние "Negotiation of Trunking"?}\par
+                 Off
         \end{itemize}
         \item lab 3.6.1
         \begin{itemize}
