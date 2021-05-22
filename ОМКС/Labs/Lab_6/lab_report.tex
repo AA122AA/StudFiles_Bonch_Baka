@@ -468,29 +468,97 @@ end
         \end{itemize}
         \item lab 4.2.7
         \begin{itemize}
-            \item \textbf{Успешно ли выполнена проверка связи? Почему вы получили этот результат?}
+            \item S1
+                \begin{lstlisting}
+hostname S1
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+...
+interface FastEthernet0/6
+switchport access vlan 30
+switchport mode access
+...
+interface FastEthernet0/11
+switchport access vlan 10
+switchport mode access
+...
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+switchport mode trunk
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+no ip address
+shutdown
+!
+line con 0
+!
+line vty 0 4
+login
+line vty 5 15
+login
+!
+end
+                \end{lstlisting}
+            \item \textbf{Успешно ли выполнена проверка связи? Почему вы получили этот результат?}\par
                 Пинги не проходят. Компьютеры находятся в разных подсетях.
             \item \textbf{Какой сети VLAN назначен интерфейс G0/1?}
                 VLAN 1
-            \item \textbf{Пинг от PC1 до PC3. Эхо-запросы по-прежнему должны не проходить между узлами. Дайте пояснение.}
+            \item \textbf{Пинг от PC1 до PC3. Эхо-запросы по-прежнему должны не проходить между узлами. Дайте пояснение.}\par
                 У свича до сих пор не настроен trunk до маршрутизатора
-            \item \textbf{Как с помощью команды show vlan можно определить, что интерфейс — это магистральный порт?}
+            \item \textbf{Как с помощью команды show vlan можно определить, что интерфейс — это магистральный порт?}\par
                 Этот интерфейс не будет отображаться в sh vlan.
-             \item \textbf{Какие адреса используют PC1 и PC3 в качестве адресов шлюза по умолчанию?}
+             \item \textbf{Какие адреса используют PC1 и PC3 в качестве адресов шлюза по умолчанию?}\par
                 Адрес подинтерфейса
         \end{itemize}
         \item lab 4.3.8
         \begin{itemize}
-            \item \textbf{Используйте команду show ip route. Есть ли активные маршруты?}
+            \item  Команды настройки vlan
+            \begin{lstlisting}
+vlan 10 
+name Staff
+vlan 20 
+name Student
+vlan 30 
+name Faculty
+            \end{lstlisting}
+            \item \textbf{Используйте команду show ip route. Есть ли активные маршруты?}\par
                 Маршрутов нет, поскольку не включена маршрутизация.
         \end{itemize}
         \item lab 4.4.8
         \begin{itemize}
-            \item 
+            \item \textbf{Не поднят сабинтерфейс на маршрутизаторе.}\par
+                \begin{lstlisting}
+int g0/1.10
+no sh
+                \end{lstlisting}
+            \item \textbf{Не настроен на коммутаторе порт как транк}\par
+                \begin{lstlisting}
+int g0/1
+switchport mode trunk
+                \end{lstlisting}
+            \item \textbf{Неверно настоен шлюз по-умолчанию}\par
+                Поменять в GUI пк.
+            \item \textbf{Неверно указаны vlan на маршрутизаторе}\par
+                \begin{lstlisting}
+int g0/1.10
+no encapsulation dot1Q 30
+int g0/1.30
+no encapsulation dot1Q 10
+int g0/1.10
+encapsulation dot1Q 10
+int g0/1.30
+encapsulation dot1Q 30
+                \end{lstlisting}
         \end{itemize}
         \item lab 4.5.1
         \begin{itemize}
-            \item 
+            \item  
         \end{itemize}
     \end{enumerate}
 \end{document}
