@@ -527,6 +527,71 @@ name Student
 vlan 30 
 name Faculty
             \end{lstlisting}
+            \item MLS
+                \begin{lstlisting}
+hostname MLS
+!
+ip routing
+!
+ipv6 unicast-routing
+!
+spanning-tree mode pvst
+!
+interface FastEthernet0/1
+...
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ switchport trunk native vlan 99
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet0/2
+ no switchport
+ ip address 209.165.200.225 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ mac-address 0002.16a2.cb01
+ ip address 192.168.10.254 255.255.255.0
+ ipv6 address 2001:DB8:ACAD:10::1/64
+!
+interface Vlan20
+ mac-address 0002.16a2.cb02
+ ip address 192.168.20.254 255.255.255.0
+ ipv6 address 2001:DB8:ACAD:20::1/64
+!
+interface Vlan30
+ mac-address 0002.16a2.cb03
+ ip address 192.168.30.254 255.255.255.0
+ ipv6 address 2001:DB8:ACAD:30::1/64
+!
+interface Vlan99
+ mac-address 0002.16a2.cb04
+ ip address 192.168.99.254 255.255.255.0
+!
+ip classless
+!
+ip flow-export version 9
+!
+ipv6 route ::/0 GigabitEthernet0/2 2001:DB8:ACAD:A::2
+!
+line con 0
+ logging synchronous
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+end
+                \end{lstlisting}
             \item \textbf{Используйте команду show ip route. Есть ли активные маршруты?}\par
                 Маршрутов нет, поскольку не включена маршрутизация.
         \end{itemize}
