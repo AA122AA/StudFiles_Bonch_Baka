@@ -66,7 +66,7 @@
         Кафедра \underline{Защищенных систем связи}
         \vspace{10ex}
 
-        \textbf{Лабораторная работа №5}\\
+        \textbf{Лабораторная работа №7}\\
         
 
 
@@ -98,33 +98,87 @@
 
     \end{center}
     \newpage
-
-    \textbf{Цель лабораторной работы:}
-    Повторение основных концепций из курса «Основы построения компьютерных сетей
-    
-
     \begin{enumerate}
-        \item \textbf{Настройка маршрутизатора Edge\_router}
-        \begin{lstlisting}
-Edge_router(config)#ip route 0.0.0.0 0.0.0.0 10.10.10.1
-Edge_router(config)#ip route 0.0.0.0 0.0.0.0 10.10.10.5 5
-Edge_router(config)#ipv6 route ::/0 2001:db8:a:1::1
-Edge_router(config)#ipv6 route ::/0 2001:db8:a:2::1 5
-Edge_router(config)#ip route 198.0.0.10 255.255.255.255 serial0/0/0
-Edge_router(config)#ip route 198.0.0.10 255.255.255.255 serial0/0/1 5
-Edge_router(config)#ipv6 route 2001:db8:f:f::10/128 2001:db8:a:1::1
-Edge_router(config)#ipv6 route 2001:db8:f:f::10/128 2001:db8:a:2::1 5
-        \end{lstlisting}
-        \item \textbf{Настройка маршрутизатора ISP1}
-        \begin{lstlisting}
-ISP1(config)# ip route 192.168.10.16 255.255.255.240 10.10.10.2
-ISP1(config)# ip route 192.168.11.32 255.255.255.224 10.10.10.2
-ISP1(config)# ip route 192.168.10.16 255.255.255.240 198.0.0.2 5
-ISP1(config)# ip route 192.168.11.32 255.255.255.224 198.0.0.2 5
-ISP1(config)# ipv6 route 2001:DB8:1:10::/64 2001:db8:a:1::2/64
-ISP1(config)# ipv6 route 2001:DB8:1:11::/64 2001:db8:a:1::2/64
-ISP1(config)# ipv6 route 2001:DB8:1:10::/64 2001:db8:f:f። 2/64 5
-ISP1(config)# ipv6 route 2001:DB8:1:11::/64 2001:db8:f:f። 2/64 5
-        \end{lstlisting}
+        \item \textbf{11.1.10 - Implement Port Security}
+            \begin{itemize}
+                \vspace{-2ex}
+                \item ПК 2 имеет возможность отправлять ping запросы в сети.
+                    \begin{center}
+                        \includegraphics[scale=0.5]{pics/11.1.10_1.png}
+                    \end{center}
+
+                \item Ноутбук злоумышленника не имеет возможность отправлять ping запросы в локальной сети.
+                    \begin{center}
+                        \includegraphics[scale=0.5]{pics/11.1.10_2.png}
+                    \end{center}
+
+                \newpage
+                \item Вывод количества нарушений безопасности.
+                    \begin{center}
+                        \includegraphics[scale=0.5]{pics/11.1.10_3.png}
+                    \end{center}
+            \end{itemize}
+        \item \textbf{11.6.1 - Switch Security Configuration}
+            \begin{itemize}
+                \item \textbf{Список команд на sw-1}
+                    \begin{lstlisting}
+en
+conf t
+int range g0/1-2
+switchport mode trunk
+switchport nonegotiate
+exit
+vlan 100
+name Native
+exit
+int range g0/1-2
+switchport trunk native vlan 100
+exit
+int range f0/3-9, f0/11-23
+shutdown
+exit
+vlan 999 
+name BlackHole
+int range f0/3-9, f0/11-23
+switchport mode access
+switchport access vlan 999
+exit
+int range f0/1-2, f0/10, f0/24
+switchport port-security 
+switchport port-security maximum 4
+switchport port-security mac-address sticky
+switchport port-security violation restrict
+exit
+int f0/1
+switchport port-security mac-address 0010.11E8.3CBB
+exit
+int range g0/1-2
+ip dhcp snooping trust 
+int range f0/1-24
+ip dhcp snooping limit rate 5
+exit
+int range f0/1-2, f0/10, f0/24
+spanning-tree portfast
+spanning-tree bdpuguard enable
+                    \end{lstlisting}
+                \item \textbf{Список команд на sw-2}
+                    \begin{lstlisting}
+en
+conf t
+int range g0/1-2
+switchport mode trunk
+switchport nonegotiate
+exit
+vlan 100
+name Native
+exit
+int range g0/1-2
+switchport trunk native vlan 100
+exit
+ip dhcp snooping vlan 10, 20, 99
+int range f0/1-2, f0/10, f0/24
+spanning-tree portfast
+                    \end{lstlisting}
+            \end{itemize}
     \end{enumerate}
 \end{document}
