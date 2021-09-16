@@ -1,0 +1,8 @@
+Для CentOS
+login: root
+password:  root4bonch
+
+
+Для веб-интерфейса:
+login: admin
+passs: admin4bonch
