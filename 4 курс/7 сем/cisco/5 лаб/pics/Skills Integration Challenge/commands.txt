@@ -1,0 +1,129 @@
+commands R1
+int g0/0.1
+enc dot1q 99 native
+ip address 192.168.99.1 255.255.255.0
+int g0/0.10
+enc dot1q 10
+ip address 192.168.10.1 255.255.255.0
+int g0/0.20
+enc dot1q 20
+ip address 192.168.20.1 255.255.255.0
+int g0/0
+no sh
+ex
+router rip
+version 2
+no auto-summary
+passive-interface g0/0.1
+passive-interface g0/0.10
+passive-interface g0/0.20
+network 192.168.1.0
+network 192.168.10.0
+network 192.168.20.0
+network 192.168.99.0
+ex
+
+commands R2
+int g0/0.1
+enc dot1q 99 native
+ip address 192.168.99.2 255.255.255.0
+int g0/0.10
+enc dot1q 10
+ip address 192.168.10.2 255.255.255.0
+int g0/0.20
+enc dot1q 20
+ip address 192.168.20.2 255.255.255.0
+int g0/0
+no sh
+ex
+router rip
+version 2
+no auto-summary
+passive-interface g0/0.1
+passive-interface g0/0.10
+passive-interface g0/0.20
+network 192.168.1.0
+network 192.168.10.0
+network 192.168.20.0
+network 192.168.99.0
+ex
+
+commands S1
+vtp mode server
+vtp domain CCNA
+vtp password cisco123
+vlan 10 
+vlan 20 
+vlan 99 
+
+commands S2, S3, S4
+vtp mode client
+vtp domain CCNA
+vtp password cisco123
+
+vcommands S1, S2, S3, S4
+int range f0/1-9
+switchport mode access 
+switchport access vlan 10
+int range f0/10-19
+switchport mode access 
+switchport access vlan 20
+int range f0/20-24
+switchport mode trunk 
+switchport trunk native vlan 99
+int range g0/1-2
+switchport mode trunk 
+switchport trunk native vlan 99
+
+commands S1
+int range g0/1-2
+channel-group 1 mode active
+int range f0/23-24
+channel-group 3 mode active
+int range f0/21-22
+channel-group 5 mode active
+
+commands S2
+int range g0/1-2
+channel-group 2 mode active
+int range f0/23-24
+channel-group 3 mode active
+int range f0/21-22
+channel-group 6 mode active
+
+
+commands S3
+int range g0/1-2
+channel-group 1 mode active
+int range f0/23-24
+channel-group 4 mode active
+int range f0/21-22
+channel-group 6 mode active
+
+commands S4
+int range g0/1-2
+channel-group 2 mode active
+int range f0/23-24
+channel-group 4 mode active
+int range f0/21-22
+channel-group 5 mode active
+
+commands S1
+spanning-tree mode rapid-pvst
+spanning-tree vlan 10 priority 4096
+spanning-tree vlan 20 priority 8192
+
+commands S2
+spanning-tree mode rapid-pvst
+spanning-tree vlan 10 priority 8192
+spanning-tree vlan 20 priority 4096
+
+commands S3
+spanning-tree mode rapid-pvst
+spanning-tree vlan 10 priority 32768
+spanning-tree vlan 20 priority 32768
+
+commands S4
+spanning-tree mode rapid-pvst
+spanning-tree vlan 10 priority 32768
+spanning-tree vlan 20 priority 32768
