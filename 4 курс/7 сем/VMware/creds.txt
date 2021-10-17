@@ -1,0 +1,11 @@
+vsphera 1
+login: zss\iktz-83
+password: student		
+
+vsphera 2
+Host            Login				Password
+Windows Server	Администратор			Student!23
+vcenter	        administrator@vsphere.local	Student!23
+esxi1	        root				Student!23
+esxi2	        root				Student!23
+

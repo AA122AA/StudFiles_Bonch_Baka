@@ -1,0 +1,565 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: RSA lab activity\n"
+"POT-Creation-Date: 2014-06-06 15:37+0400\n"
+"PO-Revision-Date: 2014-06-06 15:39+0400\n"
+"Last-Translator: Kirill <gavvvr@ya.ru>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-SearchPath-0: C:\\Users\\gavvv_000\\Documents\\RSA-lab\n"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:21
+msgid "Seed"
+msgstr "Инициализация ГСЧ"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:21
+msgid "Initialize random number generator"
+msgstr "Инициализация генератора случайных чисел"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:25
+msgid "&Quit"
+msgstr "Выход"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:25
+msgid "Quit from programm"
+msgstr "Выйти из программы"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:28
+msgid "File"
+msgstr "Файл"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:32
+msgid "Small public exponent"
+msgstr "Малая шифрующая экспонента"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:32
+msgid "Hastad's broadcast attack"
+msgstr "Атака Хастада"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:36
+msgid "Small amount of possible messages"
+msgstr "Малое количество возможных сообщений"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:36
+msgid "Linear search of encrypted message from the list of known messages"
+msgstr ""
+"Поиск зашифрованного сообщения путем полного перебора криптограмм по списку "
+"соответствующиму всех известным сообщением"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:40
+msgid "Small private exponent"
+msgstr "Малая экспонента дешифрования"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:40
+msgid "Wiener's attack"
+msgstr "Атака Винера"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:44
+msgid "Blinding attack"
+msgstr "Атака, используящая мультипликативное свойство алгоритма РША"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:44
+msgid "Attack using multiplicative property of RSA encryption"
+msgstr "Атака, использующая мультипликативное свойство шифра РША"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:48
+msgid "Cyclic attack"
+msgstr "Циклическая атака"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:48
+msgid "also known as \"Fixed-point\" attack"
+msgstr ""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:52
+msgid "Common modulus attack"
+msgstr "Атака на общие модули"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:52
+msgid "Factoring modulus knowing both exponents (secret and public)"
+msgstr ""
+"Факторизация модуля РША при помощи двух экспонент (открытой и секретной)"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:55
+msgid "Attack type"
+msgstr "Тип атаки"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:59
+msgid "View &Help"
+msgstr "Показать справку"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:63
+msgid "About"
+msgstr "О программе"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:66
+msgid "Help"
+msgstr "Справка"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:106
+msgid "Hastad's broadcast attack on small public exponent e"
+msgstr "Атака Хастада на малую открытую экспоненту \"e\""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:116
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:255
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:520
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:656
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:806
+msgid "RSA key length:"
+msgstr "Длина ключа РША:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:128
+msgid "Generate 3 RSA key sets"
+msgstr "Сгенерировать 3 набора ключей"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:138
+msgid "public exponent 'e'"
+msgstr "открытая экспонента 'e'"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:138
+msgid "private exponent 'd'"
+msgstr "секретная экспонента 'd'"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:138
+msgid "modulus 'n'"
+msgstr "модуль 'n'"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:138
+msgid "prime number 'p'"
+msgstr "простое число 'p'"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:138
+msgid "prime number 'q'"
+msgstr "простое число 'q'"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:155
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:549
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:685
+msgid "Message to encrypt:"
+msgstr "Шифруемое сообщение:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:165
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:559
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:695
+msgid "Generate random message"
+msgstr "Сгенерировать случайное сообщение"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:173
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:565
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:703
+msgid "Encrypt"
+msgstr "Зашифровать"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:184
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:322
+msgid "Ciphertext:"
+msgstr "Криптограмма:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:201
+msgid "Evaluate CRT solution"
+msgstr "Вычислить решение системы уравнений"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:209
+msgid "Find cube root using Newton's method"
+msgstr "Найти кубический корень методом Ньютона"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:267
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:532
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:668
+msgid "Generate RSA keys"
+msgstr "Сгенерировать кючи РША"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:282
+msgid "Number of possible messages:"
+msgstr "Число возможным сообщений:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:292
+msgid "Generate list of possible messages"
+msgstr "Сгенерировать список возможных сообщений"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:297
+msgid "List of possible messages:"
+msgstr "Список возможных сообщений:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:310
+msgid "Encrypt random message from above list"
+msgstr "Зашифровать случайное сообщение из списка"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:315
+msgid "Chosen message:"
+msgstr "Выбранное сообщение:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:329
+msgid "Find corresponding message"
+msgstr "Найти соответствующее сообщение"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:374
+msgid "Secret exponent length:"
+msgstr "Длина секретной экспоненты:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:381
+msgid "RSA modulus length:"
+msgstr "Длина модуля РША:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:393
+msgid ""
+"Use Carmichael function\n"
+"instead of Euler totient function"
+msgstr ""
+"Использовать функцию Кармайкла\n"
+"вместо функции Эйлера"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:402
+msgid ""
+"Generate \n"
+" RSA keys"
+msgstr ""
+"Сгенерировать \n"
+"ключи РША"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:405
+msgid ""
+"View\n"
+"RSA keys"
+msgstr ""
+"Показать\n"
+"ключи РША"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:419
+msgid "Public exponent \"e\" is:"
+msgstr "Открытая экспонента \"e\":"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:426
+msgid "Public modulus \"n\" is:"
+msgstr "Модуль криптосистемы \"n\":"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:436
+msgid "Execute Wiener's attack"
+msgstr "Выполнить атаку Винера"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:447
+msgid "i ="
+msgstr ""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:454
+msgid "k ="
+msgstr ""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:461
+msgid "g ="
+msgstr ""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:471
+msgid "Discovered secret exponent \"d\" is:"
+msgstr "Найденная секретная экспонента \"d\":"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:478
+msgid "Prime number \"p\" is:"
+msgstr "Простое число \"p\":"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:485
+msgid "Prime number \"q\" is:"
+msgstr "Простое число \"q\":"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:535
+msgid "View keys"
+msgstr "Показать ключи"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:579
+msgid "Random \"x\" from coprime to RSA modulus:"
+msgstr "Случайное число \"x\" взаимнопростое с модулем криптосистемы:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:586
+msgid "Generate coprime \"x\""
+msgstr "Сгенерировать \"x\""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:594
+msgid "Calculate C' = C*x^e mod n"
+msgstr "Посчитать C' = C*x^e mod n"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:602
+msgid "Decrypt C'"
+msgstr "Дешифровать C'"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:610
+msgid "Calculate M = M' * x^(-1) mod n"
+msgstr "Посчитать M = M' * x^(-1) mod n"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:671
+msgid "View RSA keys"
+msgstr "Показать ключи"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:717
+msgid "Given ciphertext:"
+msgstr "Известная криптограмма:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:724
+msgid "Execute cyclic attack"
+msgstr "Выполнить циклическую атаку"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:726
+msgid "Find the smallest 'k' such that C^e^k = C"
+msgstr "Найти минимально возможное 'k' такое, что C^e^k = C"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:730
+msgid "C^e^k mod n == C, where k is:"
+msgstr "C^e^k mod n == C, где k равно:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:737
+msgid "Thus message M = C^e^(k-1) mod n:"
+msgstr "Таким образом, исходное сообщение M = C^e^(k-1) mod n:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:749
+msgid "Execute generalized cycling attack"
+msgstr "Выполнить обобщенную циклическую атаку"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:752
+msgid ""
+"Find the smallest integer 'k' such that g=gcd[C^e^k - C, n] > 1.\n"
+"Then 'g' is either 'p' or 'q'."
+msgstr ""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:818
+msgid ""
+"Generate 2 RSA key sets\n"
+"using common modulus"
+msgstr ""
+"Сгенерировать 2 набора ключей\n"
+"с общим модулем"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:827
+msgid "1st user RSA keys"
+msgstr "Ключи 1го пользователя"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:832
+msgid "2nd user RSA keys"
+msgstr "Ключи 2го пользователя"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:847
+msgid "1st user key pair"
+msgstr ""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:849
+msgid "Public exponent \"e\":"
+msgstr ""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:856
+msgid "Secret exponent \"d\":"
+msgstr ""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:863
+msgid "Modulus \"n\":"
+msgstr ""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:880
+msgid "Factoring \"n\" given both exponents \"e\" and \"d\""
+msgstr "Фактризация \"n\", зная обе экспоненты \"e\" и \"d\""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:882
+msgid "Find factors of \"n\""
+msgstr "Найти делители \"n\""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:887
+msgid ""
+"g^(k*2^i) mod n is equal to 1,\n"
+"while x = g^(k*2^i-1) mod n is not equal to 1 or -1,\n"
+"where g:"
+msgstr ""
+"g^(k*2^i) mod n равно 1,\n"
+"при этом x = g^(k*2^i-1) mod n не равно 1 или -1,\n"
+"где g равно:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:894
+msgid "and odd number k = (e*d-1) / 2^t:"
+msgstr "и нечетное число k = (e*d-1) / 2^t:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:901
+msgid "Thus p = gcd(x+1, n):"
+msgstr "Тогда p = gcd(x+1, n):"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:908
+msgid "and q = gcd(x+1, n):"
+msgstr "и q = gcd(x+1, n):"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:919
+msgid "Calculation of \"d\" of 2nd user"
+msgstr "Вычисление \"d\" 2го пользователя"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:921
+msgid "Calculate \"d\""
+msgstr "Вычислить \"d\""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:963
+msgid "Set seed manually"
+msgstr "Задать начальное состояние вручную"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:966
+msgid "1"
+msgstr "1"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:1010
+msgid "Public key"
+msgstr "Открытый ключ"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:1012
+msgid "Public exponent 'e':"
+msgstr "Открытая экспонента 'e':"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:1019
+msgid "RSA modulus 'n':"
+msgstr "РША модуль 'n':"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:1030
+msgid "Secret key"
+msgstr "Секретная экспонента"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:1032
+msgid "Secret exponent 'd':"
+msgstr "Секретная экспонента 'd':"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:1039
+msgid "Prime number 'p':"
+msgstr "Простое число 'p':"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.cpp:1046
+msgid "Prime number 'q':"
+msgstr "Простое число 'q':"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_CmnModAttack.cpp:114
+#, c-format
+msgid ""
+"g^(k*2^%i) mod n is equal to 1,\n"
+"while x = g^(k*2^%i) mod n is not equal to 1 or -1,\n"
+"where g:"
+msgstr ""
+"g^(k*2^%i) mod n равно 1,\n"
+"при этом x = g^(k*2^%i) mod n не равно 1 или -1,\n"
+"где g равно:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_CmnModAttack.cpp:115
+#, c-format
+msgid "and odd number k = (e*d-1) / 2^%i:"
+msgstr "и нечетное число k = (e*d-1) / 2^%i:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_CyclicPanel.cpp:4
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_WienersPanel.cpp:4
+msgid "n/a"
+msgstr "н/д"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_CyclicPanel.cpp:56
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_HastadPanel.cpp:107
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_MultiplicativePanel.cpp:72
+msgid "The message should be between 1 and n-1 inclusive"
+msgstr "Сообщение должно быть от 1 до n-1 включительно"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_CyclicPanel.cpp:100
+#, c-format
+msgid "Failed to apply Cyclic attack in %i seconds!"
+msgstr "Не удалось выполнить циклическую атаку в течении %i секунд!"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_HastadPanel.cpp:124
+#, c-format
+msgid "Ciphertext #%d"
+msgstr "Криптограмма #%d"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_KnownMsgsPanel.cpp:45
+#, c-format
+msgid "Possible message #%d"
+msgstr "Возможное сообщение #%d"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_KnownMsgsPanel.cpp:86
+#, c-format
+msgid "Given ciphertext corresponds to possible message #%i"
+msgstr "Данная криптограмма соответствует возможному сообщению  #%i"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_KnownMsgsPanel.cpp:93
+#, c-format
+msgid ""
+"Failed to find message in %i seconds using linear search! Aborted.\n"
+"Generate a new list of possible messages with lower number of messages or "
+"decrease the size of RSA modulus."
+msgstr ""
+"Не удалось найти сообщение в течении %i секунд путем перебора известных "
+"сообщений! Операция прервана.\n"
+"Сгенерируйте новый список с меньшим числом возможных сообщений или "
+"сгенерируйте ключи меньшей длины."
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_KnownMsgsPanel.cpp:99
+msgid "None of given possible messages corresponds to given ciphertext"
+msgstr "Ни одно из возможных сообщений не соответствует данной криптограмме"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_MultiplicativePanel.cpp:45
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_MultiplicativePanel.cpp:89
+msgid "You should generate keys first"
+msgstr "Сначала следует сгенерировать ключи"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_MultiplicativePanel.cpp:66
+msgid "You should generate message for encryption first"
+msgstr "Сначала нужно сгенерировать шифруемое сообщение"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_SeedDialog.cpp:28
+msgid "The entered value is not integer"
+msgstr "Введенное значение не является целым числом"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_WienersPanel.cpp:145
+msgid "Failed to apply Wiener's attack!"
+msgstr "Не удалось выполнить атаку Винера!"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/minimal.cpp:65
+msgid "Please choose language:"
+msgstr "Выберите язык:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/minimal.cpp:66
+msgid "Language"
+msgstr "Язык:"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/minimal.cpp:77
+msgid "This language is not supported by the system."
+msgstr "Данный язык не поддерживается системой"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.h:70
+msgid "RSA Attacks lab activity"
+msgstr "Лабораторная \"Побочные атаки на РША\""
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.h:374
+msgid "Random numbers generator"
+msgstr "Генератор случайных чисел"
+
+#: C:\Users\gavvv_000\Documents\RSA-lab/GUI_Base.h:404
+msgid "RSA keys"
+msgstr "Ключи РША"
+
+#~ msgid "and k = e*d-1:"
+#~ msgstr "и k = e*d-1 равно:"
+
+#~ msgid ""
+#~ "g^(k*2^t) mod n is equal to 1,\n"
+#~ "while x = g^(k*2^t-1) mod n is not equal to ±1,\n"
+#~ "where g:"
+#~ msgstr ""
+#~ "g^(k*2^t) mod n равно 1,\n"
+#~ "при этом x = g^(k*2^t-1) mod n не равно ±1,\n"
+#~ "где g равно:"
+
+#~ msgid ""
+#~ "g^(k*2^%i) mod n is equal to 1,\n"
+#~ "while x = g^(k*2^%i) mod n is not equal to ±1,\n"
+#~ "where g:"
+#~ msgstr ""
+#~ "g^(k*2^%i) mod n равно 1,\n"
+#~ "при этом x = g^(k*2^%i) mod n не равно ±1,\n"
+#~ "где g равно:"
+
+#~ msgid "Choose \"x\""
+#~ msgstr "Выбрать \"x\""
+
+#~ msgid "Cyphertext:"
+#~ msgstr "Криптограмма:"
