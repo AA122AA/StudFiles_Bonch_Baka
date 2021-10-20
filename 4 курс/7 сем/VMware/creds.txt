@@ -1,3 +1,7 @@
+vpn 
+login: remote
+password: Student#zss1
+
 vsphera 1
 login: zss\iktz-83
 password: student		
