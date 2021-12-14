@@ -1,0 +1,14 @@
+/**
+ * SimSANs v4 Revision History
+ *----------------------------
+ *
+ * REV 20110412_4016b		April 12, 2011	CZ
+ *	- Save trace to Wireshark K12 text file
+ *	- Backup and load Engine configuration files
+ *	- Corrected target port IEEE WWN format (etc/device_xxx.conf need replace)
+ *
+ * REV 20110331_4015b		March 31, 2011	CZ
+ *	- Initial beta release of version 4.0
+ *
+ *----------------------------
+ */

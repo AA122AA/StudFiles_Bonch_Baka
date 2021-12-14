@@ -1,0 +1,28 @@
+SimSANs License Agreement
+
+SimSANs is Copyright (C) 2002-2011 Colin (Lin) Zhu. All rights reserved.
+
+SimSANs is based on OMNeT++ simulation framework, which is developed by Andras Varga. You must comply to OMNeT++ license agreement before using or distributing SimSANs.
+
+This file describes the license conditions of using SimSANs software toolkit.
+
+SimSANs (the "Software") is distributed in the hope that it will be useful. You may copy and distribute verbatim copies of the Software as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy the appropriate copyright notice and disclaimer of warranty.
+
+You may charge a fee for the physical act of transferring a copy, and you may at your option offer warranty protection in exchange for a fee.
+
+The Software can be freely used for non-profit use, including personal, educational and research non-profit use. If you want to use the Software in commercial projects or you want to include it in commercial products in any form, you must obtain a license from the author before doing so.
+
+You shall not modify your copy of the Software or any portion of it. If you want to modify your copy of the Software or incorporate modifications into the Software or distribute a modified version of the Software, you must contact the authors.
+
+The simulation results produced using the Software and extensions to the Software are naturally not covered by this License.
+
+If you use the Software in any work, the resulting document(s) (report, paper, article, book, etc.) should contain a reference to the Software and its authors.
+
+IN NO EVENT SHALL THE AUTHORS OR DISTRIBUTORS BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OF THIS SOFTWARE, ITS DOCUMENTATION, OR ANY DERIVATIVES THEREOF, EVEN IF THE AUTHORS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+THE AUTHORS AND DISTRIBUTORS SPECIFICALLY DISCLAIM ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.  THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, AND THE AUTHORS AND DISTRIBUTORS HAVE NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+
+---
+The author can be contacted via e-mail: czhu@storwav.com
+
+NOTE In case the above text differs from the license file in the latest distribution, the latter is the valid one.
