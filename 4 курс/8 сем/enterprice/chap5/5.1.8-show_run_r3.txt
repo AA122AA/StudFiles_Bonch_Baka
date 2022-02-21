@@ -1,0 +1,93 @@
+Current configuration : 972 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R3
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO1941/K9 sn FTX1524PEUL
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ description R3 LAN
+ ip address 192.168.30.1 255.255.255.0
+ ip access-group 1 out
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/0/0
+ ip address 10.3.3.2 255.255.255.252
+!
+interface Serial0/0/1
+ description Link to R2
+ ip address 10.2.2.2 255.255.255.252
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router eigrp 100
+ passive-interface GigabitEthernet0/0
+ network 192.168.30.0
+ network 10.0.0.0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+access-list 1 deny 192.168.10.0 0.0.0.255
+access-list 1 permit any
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
