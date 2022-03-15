@@ -1,0 +1,17 @@
+en
+conf t
+ho S1 
+no ip domain-l
+enab secr class
+line con 0 
+passw cisco
+login
+line vty 0 15 
+passw cisco
+login 
+exit
+service passw
+banner motd @enter password@
+exit
+copy run sta
+
