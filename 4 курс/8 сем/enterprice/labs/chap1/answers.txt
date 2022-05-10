@@ -1,0 +1,11 @@
+part1
+    - Каковы подкатегории для Network Devices?
+    Routers, Switches, Hubs, Wireless devices, Security, WAN emulation
+part2
+    d. Какие устройства используют проводное соединение для подключения к коммутатору ALS2?
+    ALS1, WebServer, Access_Point
+    e. Какое устройство подключено к Access_Point?
+    Laptop_1
+    f. Где физически находится устройство, подключенное к Access_Point ?
+    На столе
+

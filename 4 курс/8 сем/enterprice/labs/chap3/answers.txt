@@ -1,0 +1,37 @@
+part1
+    step2
+	b. dc1 r1
+    step 3
+	a. Fiber
+	a. FV_Edge_Rtr
+	c. ACL is not  applied
+    step 4 
+	c. Devices:
+	       - Air Conditioner
+	       - Thermostat
+	       - Humidity Monitor
+	       - Door
+	       - Siren
+	d. 75%
+    step 6
+	a. АС включается если температура выше 20 или ниже 19 градусов. 
+	b. 172.31.0.13 255.255.0.0
+    step 7
+	a. WiFi
+	b. Wireless
+	c. Cafe_R1, Cafe_WLC2, Cafe_Modem1
+	d. 192.168.0.11 and 192.168.0.12
+	e. Cabel Modem
+	f. Home Office PC, Home Office Laptop, Student PC, Guest Laptop
+part 2
+    step 2
+	c. 172.18.1.150
+	e. Status - Active
+	f. dst - 10.1.0.11 - Cafe_R1 g0/0
+	h. PTsecurity.txt
+	l. Congratulations
+	m. No, vpn is not connected
+	n. OpenVPN, Wireguarde,Viscosity
+    step 3
+	e. 192.168.0.10, because DHCP is active
+	i. Ping не проходит так как включена изоляция от основной сети.
